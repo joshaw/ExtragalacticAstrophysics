@@ -1,0 +1,152 @@
+\documentclass[pdf,color]{UoBnote}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\author{Andy King}
+
+\shorttitle{cosmic}
+\title{Cosmic Reionization Report}
+\date{\today}
+\issue{1}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\vspace{1cm}\hrule \vspace{1cm}
+%\newpage
+
+
+\section{ Galaxy Number Predictions}	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+One of the central tasks of the predictions subgroup is to make informed predictions regarding the distribution of galaxies around and during the epoch of reionization. As previously described, the distribution of galaxies in the early universe can be modelled using a Schechter function:
+
+\begin{align}	
+			\Phi_L = \Phi^*  \left(\frac{L}{L^*}\right)^\alpha \exp{\left( -\frac{L}{L^*} \right)} \frac{1}{L^*}
+\end{align}
+
+Ultimately, it will be necessary to resort to numerical calculations to extract meaningful predictions from this model, but it is useful and instructive to begin with an analytical approach.
+
+\subsection{Analytical Approach}	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We use the Schechter function to decribe the number density of galaxies per unit luminosity; in order to extract a true number density from this we must integrate across the relevant range of luminosities:
+
+\begin{align}	
+			n = \int_{L_1}^{L_2}  { \Phi_L \; dL } .		
+\end{align}
+
+In general, the luminosity function (and, therefore, the number density) will vary as a function of position, $\Phi_L = \Phi_L (L,\underline{\mathbf{r}})$, so in order to extract the number of galaxies in some finite volume we must integrate across the volume
+
+\begin{align}	
+			N = \int_V { n(\underline{\mathbf{r}}) \; dV } ,		
+\end{align}
+
+resulting in the double integral:
+
+\begin{align}	
+			N = \int_V { \int_{L_1}^{L_2}   { \Phi_L(L,\underline{\mathbf{r}})  \; dL } \; dV } .	
+\end{align}
+
+If the volume of space considered spans a sufficiently large area of sky then we can invoke the large scale isotropy implied by the cosmological principle to argue that, in effect, $\Phi_L$ is not dependent upon the full position vector, $\underline{\mathbf{r}}$, but only its radial component, $r$. Furthermore, since there is a one to one relationship between distance from earth, $r$, and cosmological redshift, $z$, $\Phi_L$ can be expressed as a function of just $L$ and $z$.
+
+\begin{align}	
+			\Phi_L = \Phi_L(L,r);	&&	 r= r(z); 		
+\end{align}
+
+\begin{align}
+			\therefore	\Phi_L = \Phi_L(L,z).	
+\end{align}
+
+The inaccuracy of this simplification on smaller scales is considered in more depth later, in the section on cosmic variance.
+The volume of integration can then be chosen to be a spherical shell with limits of constant redshift, so that the volume integration may be carried out over concentric and infinitesimal redshift shells:
+\begin{align}
+			N = \int_{z_1}^{z_2}  { \int_{L_1}^{L_2} { \Phi_L(L,z) \; dL } \;  \frac{dV}{dz} \; dz }.
+\end{align}
+From equation !!!comoving integral!!!, we know that:
+\begin{align} 
+		 	\frac{dr}{dz} &= \frac{c}{H(z)}. 
+\end{align}
+Together with the form of the volume, we can use this to find the derivative $\frac{dV}{dz}$:
+\begin{align}	
+					\frac{dV}{dz}  	= \frac{dV}{dr} \cdot \frac{dr}{dz} \;  
+ 				= \frac{d}{dr} \left[\frac{4}{3} \pi r^3 \right ] \cdot \frac{c}{H(z)} \
+				= 4 \pi r^2 \cdot \frac{c}{H(z)} 
+\end{align}	
+\begin{align}	
+			\Rightarrow	\frac{dV}{dz}	= \frac{4 \pi r^2 c}{H(z)}			
+\end{align}
+Applying this substitution results in 
+\begin{align}
+			N = \int_{z_1}^{z_2}  { \int_{L_1}^{L_2} { \Phi_L(L,z)  \;  \frac{4 \pi r^2 c}{H(z)} \;  dL \; dz } }
+\end{align}
+
+Where the value of r is also found using equation !!!comoving integral!!!
+
+\begin{align}
+			N = \int_{z_1}^{z_2}  { \int_{L_1}^{L_2} { \Phi_L(L,z)  \;  \frac{4 \pi c}{H(z)} \;  dL \; dz \left[ \int_0^{z'}{\frac{c }{H(z)} dz'' }\right ]^2} }
+\end{align}
+
+In practice, luminosities are most commonly measured in terms of absolute magnitude, M, so in order to align with convention we use the magnitude equivalent of the luminosity function and substitute:
+
+\begin{align}		
+			\int { \Phi_L \; dL } = \int { \Phi_M\; dM} ,	
+\end{align}
+
+where	
+
+\begin{align}	
+			\Phi_M = 0.4 \; \ln(10) \; \Phi^* \; 10^{0.4(M^*-M)(\alpha+1)} \; \exp(-10^{0.4(M^*-M)}) 
+\end{align}
+
+to give the result:
+\begin{align}	
+			N = \int_{z_1}^{z_2}  { \int_{M_1}^{M_2} { \Phi_M(M,z)  \;  \frac{4 \pi c}{H(z)} \;  dM \; dz \left[ \int_0^{z'}{\frac{c }{H(z)} dz'' }\right ]^2} } .
+\end{align}
+
+Finally, by substituting in the we substitute in the Schechter function 
+\begin{align}
+			N = \frac{4 \pi c^3}{H_0^3} \int_{z_1}^{z_2}  \frac{1}{E(z)} \;  \left[ \int_0^{z}{\frac{1}{E(z')} dz' }\right ]^2 dz \int_{M_1}^{M_2} \Phi_M(M,z) \; dM
+\end{align}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Numerical Computation}
+
+The complexity of this analytical solution makes it an impractical approach for real calculations, so in most cases numbers of galaxies are computed numerically by splitting the M and z continuum into a two dimensional array of discrete redshift shells and magnitude bins. The resulting summation takes the form:
+
+\begin{align}
+			N = \sum_i \sum_j \; \Phi_M(z_i,M_j) \; \Delta V(z_i) \; \Delta M_j .
+\end{align}
+
+Where $\Delta V(z_i)$, is the volume of the thin, but finite spherical shell between redshift $z_i$ and $z_{i+1}$, and is calculated using the standard equation for the volume of a spherical shell:
+
+\begin{align}	
+			\Delta V = \frac{4}{3} \; \pi \; ( d_{i+1}^3 - d_{i}^3)
+\end{align}
+
+The Schechter parameters used were designed for use with comoving volumes, so the distances used are comoving distances calculated from z using the standard integral relationship given in equation !!!comoving integral!!!, which is also solved numerically. (see part !!!). \\
+
+Equation !!!sum sum!!! can be seen as the direct but approximate equivalent of the double integral:
+
+\begin{align}
+			N = \int_V { \int_{M_1}^{M_2}   { \Phi_M(z,M)  \; dM } \; dV } ,
+\end{align}
+
+before it is taken to the continuum limit of infinitesimal $\Delta M$ and $\Delta V$, which makes the calculation mathematically exact.
+
+\subsection{Results}	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% schechter z dependence is implicit in parameters
+% graphs
+% luminosity functions with z
+% parameters with z
+% m with z
+% DV with z
+
+% convergance!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}

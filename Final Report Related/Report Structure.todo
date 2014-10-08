@@ -1,0 +1,116 @@
+Progress So Far:
+
+ ✔ Title
+ ☐ Abstract                                    (Joe, Mike, Beth)
+ ☐ Contents
+ ✔ Introduction                                (Joe, Mike, Beth)
+    ✔ Why observe?
+    ☐ Aims
+
+Theory - General:
+    ✔ Cosmic Re-ionisation                    (Beth)
+    ☐ Gunn Peterson Effect                    (Andy)
+    ☐ Lyman Break Galaxies                    (Lewis)
+    ✔ Gravitational Lensing                   (Catherine)
+
+Predictions:
+  ✔ Into to Predictions
+    Theory:
+        ☐ Expansion of the Universe
+            ✔ Co-moving distance / volume     (Jamie)
+            ☐ Luminosity Function
+            ☐ Red-shift
+        ✔ Schechter Function                  (Jamie)
+            ✔ What
+            ✔ Why
+        ☐ Luminosity vs Red-shift
+    ✔ General Assumptions                     (Josh)
+    ☐ Program                                 (Andy, Owen)
+        ☐ Methods
+            ☐ Trapezium Rule
+        ✔ Parameters we used                  (Josh)
+        ☐ Input / output                      (Andy, Owen)
+    ☐ Extensions?                             (Lewis)
+        ✔ Cosmic variance
+            ✔ Aspect Ratio
+        ☐ Dust? (Observations Group)
+        ☐ Perturbations
+        ☐ Recombination                       (Lewis)
+        ✔ SFR Density                         (Owen, Jamie)
+        ✔ Clumping factor                     (Lewis)
+    ✔ Number of Re-Ionising photons
+
+Observations:
+ ✔ Intro(mike)
+    Theory:
+
+ ☐ Detection methods
+    ✔ The dropout method (Dorothy), Colour(joe) contaminants(mike)
+    ✔ CMB (mike)
+    ✔ 21 cm line(Joe)
+    ✔ Gravitational lensing (Catherine, inc. grav lensing in intro)
+    ✔ Spectroscopy (john)
+ ☐ Telescopes
+    ✔ Ground vs. Space (Rahim)
+    ☐ Observation times (rahim) inc. FWHM(mike)
+    ☐ Dithering    (Mike)
+    ✔ Hubble (mike)
+    ✔ Spitzer (Dorothy)
+    ✔ Euclid (dorothy)
+    ✔ E-ELT (Rahim)
+    ✔ JWST (John)
+ ☐ Photometry strategy (Dorothy & Mike, unless otherwise stated)
+    ☐ Method
+    ☐ Low Redshift survey
+    ☐ Intermediate redshift survey
+    ☐ High redshift survey
+    ☐ Colour (Joe)
+ ☐ Spectroscopy strategy (John)
+    ☐ Low Redshift survey
+    ☐ Intermediate redshift survey
+    ☐ High redshift survey
+ ☐ Final strategy (mike)
+
+
+ ☐ Conclusion
+
+ ☐ Acknowledgements
+
+ ☐ Appendix
+
+ ☐ References
+
+
+ Cancel:
+ ✔ Intro to Obs
+        ☐ Methods for Detection
+            ✔ Dropout method                  (Ston)
+            ✔ Spectroscopy                    (John)
+                ✔ 21cm                        (Joe)
+                ✔ CMB Anistropy               (Mike)
+                ✔ Observational Gravitational lensing (Catherine)
+                ✔ Colour Photometry           (Joe)
+                    ✔ Filters + Band Conversion (Joe)
+        ☐ Exposure Times                      (Rahim)
+            ☐ Errors                          (Rahim)
+                ☐ Background
+                ☐ Dark Noise
+                ☐ Read Noise
+            ☐ Signal to Noise
+                ☐ Seeing
+
+    ☐ Telescopes (introduction to)
+        ✔ Ground vs Space based               (Rahim)
+        ☐ Telescopes chosen for investigation
+            ✔ Hubble                          (Mike)
+            ✔ James Webb                      (John)
+            ✔ Spitzer                         (Ston)
+            ✔ Euclid                          (Ston+Joe)
+            ✔ E-ELT                           (Rahim)
+        ✔ Contaminants                        (Mike)
+    ☐ Observing Strategy (Results)
+        ☐ Identify candidates
+        ☐ Exposure
+        ☐ Pick a telescope(s)
+        ☐ Justification
+        ☐ Time-scales (realistic?)

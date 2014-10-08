@@ -1,0 +1,67 @@
+\documentclass{article}
+\begin{document}
+\section{Cosmological Distances}
+This section introduces some of the important distances used in our prediction calculations. First of all is the comoving distance between two observers at different redshifts this is calculated via (Hogg 1999),
+\begin{equation}
+D_{C}(z)=\frac{c}{H_{0}}\int^{z_{2}}_{z_{1}}\frac{dz'}{E(z')}
+\end{equation}
+where E(z) is the dimensionless hubble parameter which general form is,
+\begin{equation}
+E(z)=\sqrt{\Omega_{M}(1+z)^{3}+\Omega_{R}(1+z)^{4}+\Omega_{\Lambda}}
+\end{equation}
+\indent Where the omegas are the different density parameters for mass, radiation and dark enery respectively.\\
+Therefore to calculate the comoving distance to a object at a particular redshift we use the integral above but use for $z_{1}=0$. Comoving distance is a distance between two comoving observers i.e. factoring out the expansion of the unviverse.\\
+\indent The luminosity distance is the distance a photon travels from that source. This is essentially a redshifted transverse comoving distance (Hogg 1999), which for a flat universe is the comoving distance therefore,
+\begin{equation}
+D_{L}(z)=(1+z)D_{C}(z)
+\end{equation}
+This is used when converting between magnitudes, luminosity and flux.\\
+\section{Schechter Function}
+One important part of our project is to determine the luminosity function at high redshift, which is a plot of the number density of galaxies agaisnt their respective luminosity. A schechter function is used to fit this luminosity function. A schechter function is a form that has a power law which at a ceartian cut-off at which it becomes an exponential curve. The schechter function in terms of luminosity i.e. the luminosity function is shown below, (Iribarrem; Lopes; Ribeiro; Stoeger 2012).
+\begin{equation}
+\phi(L)=\phi^{*}\frac{L}{L^{*}}^{\alpha}e^{-L/L^{*}}
+\end{equation}
+\indent The three parameters $\phi^{*}$, $L^{*}$ and $\alpha$ in our project are cited from various references at different redshifts. $\phi^{*}$ is the normalisation factor in units of $Mpc^{-3}$, $\alpha$ is the gradient of the faint end slope of the luminosity function and $L^{*}$ is the characteristic luminosity at which the function changes from a power law to an expoenential cut off.\\
+\indent There are two basic methods to determine the best fit parameters of the schechter function(University of Virginia 2005). The first one is to take cluster samples and bin them by apparent magnitude then fit a schechter function trying to minimise the error. The other way is to use the ``maximum likelyhood method''. This method takes a flux limited sample and finds the probability that a galaxy actually has a particular luminiostity at respective distances and then define a likelyhood function which is the joint probability of finding all luminosities at their respective distances. These are then the most likely parameters consistent with the data and a schechter form. Although we simply used schechter parameters from articles in our project.\\
+\indent The luminosity function can then be integrated to find the number density in $Mpc^{-3}$,
+\begin{equation}
+\rho_{N}=\int^{\infty}_{L}\phi(L)dL
+\end{equation}
+Where L is the lower limit luminosity that can be seen in the universe, this is needed as the luminosity function tends to infinity at the faint end.\\
+or luminosity density of galaxies in $erg s^{-1}Mpc^{-3}Hz^{-1}$.
+\begin{equation}
+\rho_{L}=\int^{\infty}_{L}L\phi(L)dL
+\end{equation}
+A schechter function is also used for the mass function of dark matter halos, this suggests a relation between the dark matter halo mass and luminosity of their galaxies. However it turns out that this is not an exact relation due to feedback and baryonic cooling.\\
+
+\subsection{Number of Galaxies}
+To get a lower limit luminosity for the integral of the number density integral, we can use the jeans mass at a particular redshift and for a given mass to light ratio. However this will be very much a lower limit as we are unlikely to actually see galaxies at jeans mass, or they may not actually form due to supernovae and AGN feedback.\\
+\indent It is easier to plot the luminosity function on the log scale and therefore most of the papers we cite state the absolute magnitude schechter function instead which is,
+\begin{equation}
+\phi(M)=\phi^{*}(ln10)\left[10^{0.4(M^{*}-M)}\right]^{\alpha+1}exp\left[-10^{0.4(M^{*}-M)}\right]
+\end{equation}
+Where $M^{*}$ is the characterstic absolute magnitude where the cut off happens.\\
+\indent However the observing team will be looking at a range of apparent magnitudes rather than absoulte magnitudes and so we can change the absolute magnitude equation above to apparent using the simple relationship below,
+\begin{equation}
+m=M+5((log_{10}D_{L})-1)
+\end{equation}
+Where $D_{L}$ is the luminosity distance.\\
+
+\subsection{Star Formation Rate}
+Star formation rate is directly related to luminosity via the relationship in (Kennicutt; Schweizer; Barnes 1998),
+\begin{equation}
+SFR(M_{\odot}year^{-1})=1.4\times 10^{-28}L_{\nu}(erg s^{-1}Hz^{-1})
+\end{equation}
+Therefore we can get a star formation rate density from the luminosity density calculated from our schechter function. This is useful to us as it will let us calculate the rate of ionizing photons in the high redshift universe via the equation,
+\begin{equation}
+\frac{dn_{ion}}{dt}=f_{esc}\zeta\rho_{SFR}  
+\end{equation}
+
+\section{References}
+\begin{enumerate}
+	\item Hogg, D.W. (1999) \textbf{Distance Measures in Cosmology} [online] v4.  Available from : $http://arxiv.org/abs/astro-ph/9905116$ [Accessed 27th Feburary 2013]
+	\item Iribarrem, A.S; Lopes, A.R; Ribeiro, M.B; Stoeger, W.R. (2012) 
+	\item University of Virgina Department of Astronomy (2005) \textbf{Luminosity Functions} [online]. Available from: $http://www.astro.virginia.edu/class/whittle/astr553/Topic04/Lecture_4.html$ [Accessed 25th Feburary 2013] 
+	\item Kennicutt, R.C; Schweizer, F; Barnes, J.E. (1998) Galaxies: Interactions and induced star formation \textbf{Saas-Fee advanced course lecture notes}, 26 
+\end{enumerate}   
+\end{document}     

@@ -1,0 +1,58 @@
+Introduction 
+
+General 
+The final report was compiled and formatted by Josh, and all original graphs were built by Josh.
+The general introduction, conclusion and abstract were written by Joe, Mike and Beth.
+
+I General Theory 
+
+2 Cosmic Reionization 
+Author: Beth.
+
+3 Gravitational Lensing 
+Author: Catherine.
+
+4 The Gunn-Peterson Effect 
+Author: Andy.
+
+II Predictions 
+
+5 Predictions Group 
+Author: Beth.
+
+6 Assumptions Made 
+Author: Josh.
+
+7 Cosmological Distances 
+Author: Jamie.
+
+8 Schechter Function 
+Author: Jamie.
+
+9 Parameter Values 
+Author: Josh.
+
+10 Lower Redshift limit on Reionization 
+Sections 10, 10.2 and 10.3 written by Jamie; section 10.1 written by Beth.
+
+11 Calculating the timescale of Reionization 
+Author: Owen
+With contributions from Lewis.
+
+12 Cosmic Variance
+Author: Lewis.
+With contributions from Andy.
+
+13 Gravitational Lensing Bias 
+Author: Lewis.
+
+14 Clumping Factor 
+Author: Lewis.
+
+15 Galaxy Number Predictions 
+Author: Andy.
+Early galaxy number computations were assisted by Owen.
+
+16 Conclusion
+Author: Beth
+With contribution from Jamie.

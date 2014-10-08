@@ -1,0 +1,148 @@
+%!TEX root = Management_Plan.tex
+
+% Remove the author and date fields and the space associated with them
+% from the definition of maketitle!
+\makeatletter
+\renewcommand{\@maketitle}{
+\newpage
+ \null
+ \vskip 2em%
+ \begin{center}%
+  {\Large \@title \par}%
+ \end{center}%
+ \par} \makeatother
+
+\title{Extragalactic Astrophysics and Cosmology\\
+Year 3 Group Study 2013}
+\maketitle
+\begin{center}
+\Huge Management Plan \\[1em]
+\large 23rd January 2013
+\end{center}
+
+\section{Roles} % (fold)
+\label{sec:roles}
+The lead roles that have been agreed for the  Extraglalctic Astrophysics group are as follows, 
+
+\begin{tabular}{>{\bfseries}ll}
+	Chair 			& Joe Baumber \\[0.8em]
+	Seminars		& Dorothy Stonell \\
+					& Joe Baumber \\[0.8em]
+	Editors 		& Josh Wainwright \\
+					& Lewis Clegg \\[0.8em]
+	Communications 	& Dorothy Stonell \\[0.8em]
+	Subgroup Leads	& Bethany Johnson \\
+					& Mike O'Neill \\[0.8em]
+	Subject leaders	& Graham Smith \\
+					& Alistair Sanderson \\
+					& Meilissa Gillone
+\end{tabular}	
+
+The team members are distributed into sub-group as follows,
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{l|l}
+		\multicolumn{1}{c}{\textbf{Predictions}} &   \multicolumn{1}{c}{\textbf{Observations}} \\
+		\hline \hline
+		\textbf{Bethany Johnson}	& \textbf{Mike O'Neill} \\
+		Jamie Bryant	& Joe Baumber \\
+		Owen McConnell	& Dorothy Stonell \\
+		Lewis Clegg		& Catherine McDonald \\
+		Andrew King		& John Shepley\\
+		Josh Wainwright	& Rahim Topadar \\
+		\textit{Alistair Sanderson} & \textit{Melissa Gillone}
+	\end{tabular}
+\end{table}
+% section roles (end)
+
+\section{Aims of the project}
+\begin{description}
+	\item[Overall] To develop an observing strategy for measuring the redshift at which the universe was completely re-ionized, and the redshift interval over which re-ionization took place.
+
+	\item[Prediction group] To generate realistic predictions via computer aided calculations of what the observing group aims to study and might expect to detect, in terms of numbers of galaxies per unit area, luminosity and redshift.
+
+	\item[Observing group] Research the observational techniques and practices available for looking back to Re-ionization. Then decide on an observational strategy to test the predictions.
+\end{description}
+
+\subsection{Combined Deadlines} % (fold)
+\label{sub:combined_deadlines}
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{l|c|l}
+		\multicolumn{1}{c}{\textbf{Date}} & \textbf{Time} & \multicolumn{1}{c}{\textbf{Task}} \\
+		\hline \hline
+		Tuesday 22nd Jan 		& 2pm & Have attempted Q1-3 of worksheet \\
+		Wednesday 23rd Jan 		& 4pm & Hand in management plan \\
+		Tuesday 29th Jan 		& 2pm & Have attempted Q4-5 of worksheet \\
+		Monday 4th February 	& 4pm & Hand in worksheet \\
+		Tuesday 26th February 	& 4pm & Begin seminar discussion/preparation \\
+		Tuesday 12th March 		& 1pm & Deliver seminar \\
+		Thursday 14th March 	& 4pm & Hand in personal statement \\
+		Friday 15th March 		& 12-4pm	& Deliver Viva \\
+		Monday 18th March		& 11am	& Report to editors \\
+		Firday 22nd March 		& 3pm & Hand in report.
+	\end{tabular}
+\end{table} 
+% subsection combined_deadlines (end)
+\subsection{Session Structure} % (fold)
+\label{sub:session_structure}
+There are three arranged weekly sessions that all or part of the group will attend as well as one or more of the subject leaders. These are outlined below.
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{c|p{10em}|p{20em}}
+		Session	& In Attendance	& Structure \\
+		\hline\hline
+		Tuesday 2-4pm & Whole group including all subject leaders	& 30\,minute catch up on progress, remaining time for issues and other queries (potenially split into sub-groups) \\[0.8em]
+		Tuesday 4-6pm &Both sub-groups& Each sub-group continues with required work, with interaction between sub-groups if necessary  \\[0.8em]
+		Thursday 2-4pm &Alastair Sanderson and Predictions group& Predictions group continue with work, discussing progress, problems and suggestions with Alastair \\[0.8em]
+		Thursday 4-6pm &Both sub-groups& Each sub-group continues with required work, with interaction between sub-groups if necessary \\[0.8em]
+		Friday 4-6pm &Melissa Gillone and Observations group& Predictions group continue with work, discussing progress, problems and suggestions with Melissa
+	\end{tabular}	
+\end{table}
+% subsection session_structure (end)
+
+\section{Predictions Group Plan} % (fold)
+\label{sec:predictions_plan}
+\begin{enumerate}
+	\item Determine the goals of the program: ask Al what the program mainly needs to output.
+	\item Research current simulations and methods: websites, books, papers, past projects. The research is split into sections
+		\begin{itemize}
+			\item Solid angle conversions etc.: Andy, Jamie
+			\item Variables and constants to use etc.: Owen, Lewis
+			\item Extra considerations to increase accuracy etc.: Beth, Josh
+		\end{itemize}
+	\item Produce the design plan for program structure: determine cosmic parameters, decide on main outputs of program and how they will be structured, and assign areas of coding to each of the three ‘coders’. Continue researching into the theory to support the program and quantify the features i.e. redshift, luminosity, density etc. The main contributers to the code will be Andy, Josh and Owen.
+	\item Begin to build the program (alpha).
+	\item Test preliminary program (alpha) with known values so that we can determine that the program acts as anticipated, if this is not the case then rectify this however if the program runs as hopes then proceed to step 6. 
+	\item Refine program (beta).
+	\item Test beta. Again, if it requires editing or refining then that is the priority. Whilst this is being looked at by the testers, the values should be overlooked and verified by those working on the calculations. Furthermore, those working on the calculations should be helping the computing people to document their progress. 
+	\item Produce final program with values that can be fed through to the telescope group. 
+	\item Write everything up in the report. 
+\end{enumerate}
+% section predictions_plan (end)
+
+\section{Observations Group Plan}
+\begin{enumerate}
+	\item Sub-group A - Understand the Epoch of Re-ionization (EoR), the physics that took place, the objects created at this time (e.g.\ quasars/Lyman Break galaxies) and how this enables us to study this period. - Mike, Catherine and John.
+
+	\item Sub-group B - Research current studies and missions looking into the EoR, what equipment they are using (e.g.\ ground/space telescopes), combined with which techniques are favoured (e.g. photometry, spectroscopy). - Rahim, Joe, Dorothy.
+
+	\item Understand and carry out calculations that will be required (e.g.\ signal/noise, luminosity, redshift, exposure times). To help with this, the observing group will complete Q5 from the worksheet before the rest of the group.
+
+	\item Look into future/proposed projects such as Euclid and James Webb telescopes; their capabilities, intended fields of study and timescales etc.
+
+	\item Investigate areas of contamination in the sample, the impact of other objects such as dust and stars along with other sources of error.
+
+	\item Once the predictions have been made, decide on a telescope that best enables us to take accurate measurements and give reasons why other options are less suitable. As part of this strategy we will need to decide a direction to aim our telescope and the size of our field of view as well as exposure times. If it is possible and suitable, both a telescope currently in existence and a proposed telescope will be selected, to represent the best observations available today and at a future date.
+\end{enumerate}
+
+\section{Potential Risks} % (fold)
+\label{sec:potential_risks}
+As part of the management plan it is important to consider potential risks that could present themselves as the project progresses. These risks are discussed below.
+\begin{itemize}
+	\item Meeting deadlines for work; every member of the group needs to stay on top of the large amount of work required so that deadlines can be met.
+	\item Getting stuck on work; this applies to teams as a whole and individual members, to always ask for help as soon as it is clear that no more progress can be made on a piece of work.
+	\item Editing the final report; if there proves to be too much work for the current Editors, an extra Editor will be drafted in from the group.
+\end{itemize}
+
+% section potential_risks (end)

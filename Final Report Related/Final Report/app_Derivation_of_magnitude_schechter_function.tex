@@ -1,0 +1,113 @@
+\newpage
+\section{Derivation of Magnitude Schechter Function} % (fold)
+\label{app:derivation_of_magnitude_schechter_function}
+	The luminosity function of galaxies is the object, $\Phi_L$, such that the number density of galaxies can be calculated as
+	\begin{align}
+		n = \int { \Phi_L \d{L} }.\label{eq:nfromphiL}
+	\end{align}
+	We, therefore define the magnitude equivalent of the luminosity function to be the object, $\Phi_M$, which obeys the equivalent formula
+	\begin{align}
+		n = \int { \Phi_M \d{M} }.\label{eq:nfromphiM}
+	\end{align}
+	From equation~(\ref{eq:nfromphiL}), we deduce that
+	\begin{align}
+		n = \int { \Phi_L \dx{L}{M}\d{M} },
+	\end{align}
+	it is then clear, from comparison of this result with equation~(\ref{eq:nfromphiM}), that
+	\begin{align}
+		\Phi_M = \Phi_L \dx{L}{M}.\label{eq:conversion}
+	\end{align}
+	We then choose the standard Schechter function as our model of the luminosity function and aim to derive the form of its magnitude equivalent, $\Phi_M(M)$.
+	\begin{align}
+		\Phi_L = \Phi^*  \left(\frac{L}{L^*}\right)^\alpha \exp{\left( -\frac{L}{L^*} \right)} \frac{1}{L^*}
+	\end{align}
+	\begin{align}
+		M &= -2.5\log_{10}\left ( \frac{L}{L_0}\right) \\
+		   &= \frac{-2.5}{\ln(10)} \ln\left ( \frac{L}{L_0}\right) \\[1em]
+		\Rightarrow \dx{M}{L} &= \frac{-2.5}{\ln(10)} \frac{1}{L}
+	\end{align}
+	Substituting this result into equation~(\ref{eq:conversion}), gives
+	\begin{align}
+		\Phi_M(L) &= \frac{-L\ln(10)}{2.5} \Phi^*  \left(\frac{L}{L^*}\right)^\alpha \exp{\left( \frac{-L}{L^*} \right)} \frac{1}{L^*} \\
+		&= \frac{-\ln(10)}{2.5} \Phi^*  \left(\frac{L}{L^*}\right)^{\alpha+1} \exp{\left( \frac{-L}{L^*} \right)}.
+	\end{align}
+	\begin{align}
+		M - M^* = -2.5 \log_{10}\left( \frac{L}{L^*} \right)	\\
+		\left( \frac{L}{L^*} \right)= 10^{0.4(M^*-M)}
+	\end{align}
+	Finally, we apply this substitution to give
+	\begin{align}
+		\Phi_M(M) = \frac{-\ln(10)}{2.5} \Phi^*  10^{0.4(M^*-M)(\alpha+1)} \exp(-10^{0.4(M^*-M)}) .
+	\end{align}
+	In practice, the minus sign is accounted for by inverting the limits of integration and integrating from low M to high M (dim galaxies to bright galaxies).
+% section derivation_of_magnitude_schechter_function (end)
+
+
+\newpage
+\section{Derivation of Light Travel Distance} % (fold)
+\label{app:derivation_of_light_travel_distance}
+	\begin{align}
+		\d{l} = c\d{t}.
+	\end{align}
+	If there is a 1:1 relationship between scale factor, $a$, and time, $t$, then we can say
+	\begin{align}
+		\d{t} = \dx{t}{a} \d{a} = \frac{\d{a}}{\dot{a}}
+	\end{align}
+	We then use
+	\begin{align}
+		a &= \frac{1}{1+z} \\
+		\Rightarrow \d{a} &= -\frac{\d{z}}{(1+z)^2} = -\frac{a\d{z}}{1+z}.
+	\end{align}
+	and by the definition of the Hubble parameter, $H(z) = \frac{\dot{a}}{a}$, so
+	\begin{align}
+		\d{t} = \frac{\d{a}}{\dot{a}} = \frac{-\d{z} }{1+z} \frac{a}{\dot{a}} = \frac{-\d{z}}{(1+z) H(z)}
+	\end{align}
+	\begin{align}
+		l &= \int c \d{t} = \int_z^0 \frac {-c\d{z'}}{(1+z') H(z')} \\
+		\Rightarrow l &= \int_0^z \frac{c\d{z'}}{(1+z') H(z')}
+	\end{align}
+% section derivation_of_light_travel_distance (end)
+
+\section{Schechter Function to Gamma Function} % (fold)
+\label{sec:schechter_function_to_gamma_function}
+	\begin{align}
+		\rho_L & = \int^{\infty}_{L'=L} \phi(L')L'\d{L'}\\
+		&= \frac{\phi^*}{L^*}\int^{\infty}_{L'=L}\left (\frac{L'}{L^*} \right )^{\alpha}e^\frac{-L'}{L^*}L'\d{L'}\\
+		& = \frac{\phi^*}{L^*}\int^{\infty}_{L'=L}\left (\frac{L'}{L^*}\right )^{\alpha}e^\frac{-L'}{L^*}\frac{L'L^*}{L^*}dL'\\
+		& = \frac {\phi^*}{L^*}\int^{\infty}_{L'=L}\left ( \frac{L'}{L^*} \right )^{\alpha+1}e^\frac{-L'}{L^*}L^{*2}\d{\frac{L'}{L^*}} \\
+		& = \phi^*L^*\int^{\infty}_{L'=L}\left ( \frac{L'}{L^*} \right )^{\alpha+1}e^\frac{-L'}{L^*}\d{\frac{L'}{L^*}}\\
+		& = \phi^*L^*\Gamma(\alpha+2, L/L^*)
+	\end{align}
+% section schechter_function_to_gamma_function (end)
+
+\section{Magnitude to Spectral Luminosity} % (fold)
+\label{sec:magnitude_to_spectral_luminosity}
+	\begin{align}
+		m-M &=5(\log d_l - 1)\\
+		5(1-\log (d_l)) &= M + (48.6+2.5\log f_v) \\
+		5(1-\log (d_l)) &= M + 48.6 + 2.5(\log l_v - \log 4\pi - 2 \log d_l) \\
+		5(1-\log (d_l)) &= M+48.6 + 2.5(\log L_v - \log 4\pi) \\
+		M+48.6 &=-2.5 \log (\frac{L_v}{4\pi})+5 \\
+		M &=5-2.5(\log (\frac{L_v}{4\pi})) - 48.6
+	\end{align}
+% section magnitude_to_spectral_luminosity (end)
+
+\section{Extinction for Different Redshift Values} % (fold)
+\label{sec:extinction_for_different_redshift_values}
+	\begin{table}[ht]
+		\begin{center}
+			\begin{tabular}{c|c|c}
+				Redshift range & $A_\lambda$ & $A_V$  \\
+				\hline \hline
+				6-7.5	   &0.013&  0.0044 \\
+				7.5-8.5&0.013&  0.0044 \\
+				8.5-10 &0.036&  0.0122\\
+				10-14  &0.082&  0.0277\\
+				14-15  &0.105&  0.0355\\
+			\end{tabular}
+		\end{center}
+		\caption{Table showing values of Extinction for different redshift values}
+		\label{tab:extinction_values}
+	\end{table}.
+% section extinction_for_different_redshift_values (end)
+

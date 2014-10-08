@@ -1,0 +1,42 @@
+%!TEX root = mainfile.tex
+
+\section{Schechter Function} % (fold)
+\label{sec:schechter_function}
+(Jamie)
+
+	One important part of our project is to determine the luminosity function at high redshift, which is a plot of the number density of galaxies binned against their respective luminosities. A Schechter function is used to fit this luminosity function. A Schechter function is a form that has a power law which has a certain cut-off at which it becomes an exponential curve. The Schechter function in terms of luminosity i.e.\ the luminosity function is shown in equation~(\ref{eq:shechter_luminosity})\cite{cosmo_number_densities}.
+	\begin{align}
+		\phi(L)=\frac{\phi^{*}}{L^{*}}\left(\frac{L}{L^{*}}\right)^{\alpha}e^{-L/L^{*}} \label{eq:shechter_luminosity}
+	\end{align}
+	Where $\phi^{*}$ is the normalisation factor in units of \si{\per\mega\parsec\cubed}, $\alpha$ is the gradient of the faint end slope of the luminosity function and $L^{*}$ is the characteristic luminosity at which the function changes from a power law to an exponential cut off. This shape shows us that there are a majority of lower luminosity galaxies and not many bright ones.
+
+	There are two basic methods to determine the best fit parameters of the Schechter function\cite{luminosity_functions_online}. The first one is to take cluster samples and bin them by apparent magnitude then fit a Schechter function trying to minimize the error. The other way is to use the ``maximum likelihood method''. This method takes a flux limited sample and finds the probability that a galaxy actually has a particular luminiostity at respective distances and then define a likelihood function which is the joint probability of finding all luminosities at their respective distances. These are then the most likely parameters consistent with the data and a Schechter form. However in this project Schechter parameters were simply cited from various articles as we are not doing any observations ourselves to get our predictions.
+
+	The luminosity function can then be integrated to find the number density in \si{\per\mega\parsec\cubed}
+	\begin{align}
+		\rho_{N}=\int^{\infty}_{L}\phi(L)\d{L}
+	\end{align}
+	Where $L$ is the lower limit luminosity that can be seen in the universe, this is needed as the luminosity function tends to infinity at the faint end.
+
+	It is easier to plot the luminosity function on the log scale and therefore most of the papers we cite state the absolute magnitude Schechter function instead which is obtained by substituting
+	\begin{align}
+		\frac{L}{L*}=10^{0.4(M^{*}-M)}
+	\end{align}
+	which is then multiplied by the derivative and rearranged to get the equation
+	\begin{align}
+		\phi(M)=\phi^{*}(\ln(10)){\left[10^{0.4(M^{*}-M)}\right]}^{\alpha+1}\e{\left(-10^{0.4(M^{*}-M)}\right)}
+	\end{align}
+	Where $M^{*}$ is the characteristic absolute magnitude where the cut off happens.
+
+	However a range of apparent magnitudes is normally observed, rather than absolute magnitudes and so the absolute magnitude equation above is changed to it's apparent magnitude form, using the simple relationship below
+	\begin{align}
+		m=M+5((\log_{10}D_{L})-1)
+	\end{align}
+	Where $D_{L}$ is the luminosity distance. Note that the derivative of this substitution is 1 and so does not need to be accounted for.
+
+	Or the luminosity density of galaxies in \si{\erg\per\second\per\mega\parsec\cubed\per\hertz} can also be calculated using
+	\begin{align}
+		\rho_{L}=\int^{\infty}_{L}L\phi(L)dL
+	\end{align}
+	This will become useful for calculating star formation rates in later sections.
+% section schechter_function (end)

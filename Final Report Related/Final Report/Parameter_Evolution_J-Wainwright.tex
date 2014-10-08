@@ -1,0 +1,93 @@
+%!TEX root = mainfile.tex
+
+\section{Parameter Values} % (fold)
+\label{sec:parameter_values}
+(Josh)
+
+	There are also a number of parameters in the Schechter function that must be specified. In order to find suitable values to use, data from a number of different sources has been collected covering several studies. All of the studies that have been performed in the past concern galaxies at lower redshifts than were examined. To get an estimate for the value of each of the parameters at higher redshift, the values found were plotted and the fit extrapolated to cover the era necessary. Since some of the fits demonstrate that these parameters are not constant with time, their evolution shall be incorporated into the calculations.
+
+	The values in the Schechter function that have been fitted are $\alpha$, $M^{*}$ and $\phi^{*}$. The data collected for each of these fits is shown in appendix~\ref{app:parameter_fit_data}.
+
+	\subsection{Parameter Evolution} % (fold)
+	\label{sub:parameter_evolution}
+		The early stages of the models that were used assumed that the parameters of the Schechter function were static with respect to time. This means that, when iterating over the redshift, the only property that changed was the co-moving volume. This is non-physical since it does not allow for changes in the characteristic mass and characteristic luminosity for different conditions in the universe. In order to improve the model, data from a number of previous studies was collected for three values, the characteristic mass, $M^*$, the Schechter normalisation, $\phi^*$ and the faint end slope parameter, $\alpha$.
+
+		\subsubsection{Linear Parameter Evolution with Redshift} % (fold)
+		\label{ssub:linear_parameter_evolution_with_redshift}
+			In order to provide useful errors on the fits of the parameters, a technique called the pivot fit method is used to decouple the errors on $y$-intercept and gradient. This involves fitting the data after it has been normalised around the mean value. This normalisation simply involves taking the mean $x$- and $y$-value from each data point so that the graph is centred about the origin. This means that the $y$-intercept is fixed to zero and thus the fitting error applies only to the gradient. Subsequent linear fits shall be treated in this manner, so that errors quoted correspond to the gradient. For clarity of presentation, the data shall be plotted in its original form.
+
+			The graph in Figure~\ref{fig:alpha_evolution} shows the data collected, with the corresponding uncertainties, for the linear parameter, $\alpha$. From this data, a linear fit is taken. The relevant evolution, then, is governed by the equation $\alpha = -0.015z - 1.664$.
+			\begin{figure}[htbp]
+				\begin{minipage}[c]{0.5\linewidth}
+					\centering
+						\begingroup\endlinechar=-1
+							\resizebox{\textwidth}{!}{%
+								\input{GRAPH_Parameter_Fit_alpha_linear.tex}
+							}\endgroup
+				\end{minipage}
+				\begin{minipage}[c]{0.5\linewidth}
+					\centering
+						\begingroup\endlinechar=-1
+							\resizebox{\textwidth}{!}{%
+								\input{GRAPH_Parameter_Fit_alpha_bounds.tex}
+							}\endgroup
+				\end{minipage}
+				\caption{The evolution of $\alpha$ as a function of redshift according to past observational studies, left. Using the upper and lower limits of the parameter fit, the bounds of the value of $\alpha$ are plotted, right.\label{fig:alpha_evolution}}
+			\end{figure}
+
+			Figure~\ref{fig:phi_evolution} shows the data for the evolution of the normalisation parameter $\phi^{*}$. This value is known to be never less than zero. For this reason, coupled with an attempt to reduce the errors as far as possible, an exponential decrease with redshift was chosen. Although the errors for this fit are large, because of the errors on the data points, the region of concern, high redshift greater than 6, this evolution can be approximated to zero. In other words, during the times that is being considered, it can be approximated that there was no change in the value of the normalisation parameter, $\phi^*$.
+			% \begin{figure}[htbp]
+			% 	\centering
+			% 		\begingroup\endlinechar=-1
+			% 			\resizebox{0.6\textwidth}{!}{%
+			% 				\input{GRAPH_Parameter_Fit_phi-star_exponential.tex}
+			% 			}\endgroup
+			% 	\caption{The evolution of $\phi^{*}$ as a function of redshift according to past observational studies.\label{fig:phi_evolution}}
+			% \end{figure}
+			\begin{figure}[htbp]
+				\begin{minipage}[c]{0.5\linewidth}
+					\centering
+						\begingroup\endlinechar=-1
+							\resizebox{\textwidth}{!}{%
+								\input{GRAPH_Parameter_Fit_phi-star_exponential.tex}
+							}\endgroup
+				\end{minipage}
+				\begin{minipage}[c]{0.5\linewidth}
+					\centering
+						\begingroup\endlinechar=-1
+							\resizebox{\textwidth}{!}{%
+								\input{GRAPH_Parameter_Fit_phi-star_bounds.tex}
+							}\endgroup
+				\end{minipage}
+				\caption{The evolution of $\phi^{*}$ as a function of redshift according to past observational studies. Using the upper and lower limits of the parameter fit, the bounds of the value of $\phi^*$ are plotted, right.\label{fig:phi_evolution}}
+			\end{figure}
+
+			The final parameter is the characteristic magnitude, $M^*$. It was determined that a linear fit was best again and so the pivot method was used to reduce the error. The final equation used was $M^* = 0.221z - 21.642$, shown in Figure~\ref{fig:m-star_evolution}.
+			% \begin{figure}[htbp]
+			% 	\centering
+			% 		\begingroup\endlinechar=-1
+			% 			\resizebox{0.6\textwidth}{!}{%
+			% 				\input{GRAPH_Parameter_Fit_m-star_linear.tex}
+			% 			}\endgroup
+			% 	\caption{The evolution of $M^{*}$ as a function of redshift according to past observational studies.\label{fig:m-star_evolution}}
+			% \end{figure}
+			\begin{figure}[htbp]
+				\begin{minipage}[c]{0.5\linewidth}
+					\centering
+						\begingroup\endlinechar=-1
+							\resizebox{\textwidth}{!}{%
+								\input{GRAPH_Parameter_Fit_m-star_linear.tex}
+							}\endgroup
+				\end{minipage}
+				\begin{minipage}[c]{0.5\linewidth}
+					\centering
+						\begingroup\endlinechar=-1
+							\resizebox{\textwidth}{!}{%
+								\input{GRAPH_Parameter_Fit_m-star_bounds.tex}
+							}\endgroup
+				\end{minipage}
+				\caption{The evolution of $M^{*}$ as a function of redshift according to past observational studies. Using the upper and lower limits of the parameter fit, the bounds of the value of $M^*$ are plotted, right.\label{fig:m-star_evolution}}
+			\end{figure}
+		% subsubsection linear_parameter_evolution_with_redshift (end)
+% subsection parameter_evolution (end)
+

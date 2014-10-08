@@ -1,0 +1,37 @@
+	\subsection{Photometry Exposure Times} % (fold)
+	\label{sub:calculating_exposure_time}
+		To calculate the exposure time required to view an object at a particular signal-to-noise ratio, the flux density of the source must first be obtained. The flux of the source incident on the CCD can be calculated using the value of apparent magnitude gained from the computational model produced by the Predictions subgroup. This magnitude must first be converted to a flux per unit frequency ($F_\nu$) using equation~(\ref{eq:ab_magnitude}).
+
+		This must then be converted to flux per unit wavelength for use with the properties of the telescope as well as to the required units of \si{\joule\per\second\per\square\centi\metre\per\micro\metre}. This can be done via the formula below. %J/s/cm$^2$/$\mu$m
+		\begin{align}
+			F_\lambda = \frac{\nu F_\nu \times 10^{-7}}{\lambda} \label{eq:flux_per_unit_frequency}
+		\end{align}
+		This can then be used to calculate the number of photons striking the primary mirror of the telescope by multiplying this value of flux by the area of the telescopes primary mirror, the bandwidth of the telescope as well as the number of photons per joule of energy. The energy of each photon can be calculated using the wavelength of the incoming photon via $E = \frac{hc}{\lambda}$ and the reciprocal of this value will then give the number of photons per joule of energy. The wavelength of the incoming photon is dependent on the redshift of the source via equation~(\ref{eq:dropout_wavelength}). The number of photons reaching the CCD can then be calculated by multiplying the number of photons reaching the primary mirror by the throughput of the filter as well as the reflectivity of each mirror the photon must reflect off before reaching the CCD. A rearranged form of the CCD equation, shown below, can then be utilised to calculate an exposure time required to view a given source.
+		\begin{align}
+			F^2 t^2 - (\frac{S}{N}){^2}(F + BN_\text{pix} + DN_\text{pix})t - (\frac{S}{N}){^2}R{^2}N_\text{pix} = 0
+		\end{align}
+		The quadratic formula can then be used to calculate a value of exposure time $t$ in seconds. For ground based telescopes that are background limited, i.e.\ they receive more photons from background than from the source, this calculation of exposure using the CCD equation can be slightly simplified to:
+		\begin{align}
+			t = (\frac{S}{N})^2 \frac{BN_\text{pix}}{F^2}
+		\end{align}
+		A program was created to complete these calculations incorporating the above equations for various sources and provide the exposure times required for numerous telescopes. These values were then used to determine the suitability of the numerous telescopes for observing high redshift galaxies from the start of the epoch of reionization along with galaxies formed at the end of the EoR. These exposure times calculated are the time required to produce an image with a certain signal-to-noise ratio in one band and so a further 2 or 3 observations must be taken in different bands to confirm the redshift of the galaxies via the dropout method.
+	% subsection calculating_exposure_time (end)
+
+	\subsection{Overhead Times} % (fold)
+	\label{sub:overhead_times}
+		There are many factors that contribute to the time required with a telescope to view a chosen object. Time required with the shutters of the telescope closed is regarded as an overhead time and must be considered during the final observational strategy. This includes time for each of the following\cite{Overhead_Times}:
+		\begin{itemize}
+			\item Telescope Alignment
+			\item Changing filters. This usally requires a time of around 1 minute however this may differ for different instruments.
+			\item Changing CCDs to avoid loss of data due to cosmic ray events. Cosmic ray events contribute photons that contaminate pixels in the CCD meaning the image is also slightly contaminated. To avoid this, exposure time is normally split up into a number of separate exposures thus minimising the contamination due to cosmic rays. This can normally be set using a CR-SPLIT option which allocates a fraction of the exposure time to each exposure\cite{Space_Telescope_Science_cosmic_rays}. Importantly, cosmic rays have less impact during observations of small targets such as the galaxies being observed during this project. The splitting of the total exposure time into separate exposures also means an overhead time to replace the CCDs must be considered during the final observing strategy.
+			\item Clearing the CCD. The CCD is cleared before every exposure and takes approximately 16\,seconds.
+			\item Readout of the CCD. The readout time for a CCD is generally around one minte but increases for exposures of longer than 180\,seconds. This readout time is for one CCD and so must be multiplied by the number of CCDs used  during the exposure. The number of exposures will be increased if the CR-SPLIT option is used.
+			%\item Dithering. This is a technique used in photometry whereby the pointing is adjusted a small amount between exposures. This technique's primary use it to account for dead pixels in the CCD; with adjustments of a few pixels the median stacking of the images means that any such defects will disappear. The technique also compensates for the presence of cosmic rays as well as undersampled images; where the sampling frequency is less than twice the highest frequency in the signal (Nyquist Theorem). Dithering also has the benefit of randomising the quantization error that occurs during the analogue-digital conversion of the signal\cite{ADC_Kamensky}. Using a digital image processing method called ``DRIZZLE'', originally developed for use in the Hubble Deep Field, the dithered images can be combined to produce more accurate observations for a given S/N [DRIZZLE].
+			\item Transmission of data to Earth from a space based telescope
+		\end{itemize}
+		Overhead times are extremely difficult to determine quantitatively with times for each of these overheads varying considerably depending on circumstance and the instrument or telescope used. During the final observational strategy for this project, an additional overhead time of 10\% of the required exposure time will be allocated.
+	% subsection overhead_times (end)
+	\subsubsection{Dithering} % (fold)
+	\label{ssub:dithering}
+		Dithering is a technique used in photometry whereby the pointing is adjusted a small amount between exposures. This technique's primary use it to account for dead pixels in the CCD; with adjustments of a few pixels the median stacking of the images means that any such defects will disappear. The technique also compensates for the presence of cosmic rays as well as undersampled images; where the sampling frequency is less than twice the highest frequency in the signal (Nyquist Theorem). Dithering also has the benefit of randomising the quantization error that occurs during the analogue-digital conversion of the signal\cite{ADC_Kamensky}. Using a digital image processing method called ``DRIZZLE'', originally developed for use in the Hubble Deep Field, the dithered images can be combined to produce more accurate observations for a given S/N\cite{DRIZZLE}.
+	% subsubsection dithering (end)

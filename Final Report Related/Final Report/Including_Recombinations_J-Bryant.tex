@@ -1,0 +1,43 @@
+%!TEX root = mainfile.tex
+
+\subsection{Including Recombinations} % (fold)
+\label{sub:including_recombinations}
+
+	To include Recombinations into our project, the rate at which hydrogen will recombine. The mean recombination time\cite{2012ApJ...746..125H} has the form
+	\begin{align}
+		\overline{t}_\text{rec}= \left[1.08\langle n_{H}\rangle\alpha_{B}C \right]^{-1}
+	\end{align}
+	Where $C$ is the clumping factor of the IGM (Section~\ref{sec:clumping_factor}), $\alpha_{B}$ is the recombination coefficent for excited states of hydrogen and the 1.08 accounts for the presence of photoelectrons from singly ionized helium.
+
+	Values of the clumping factor against redshift are the ones used in Section~\ref{sec:clumping_factor}. The recombination coefficient for excited hydrogen is cited from\cite{1993PhyA..192..249L} and is proportional to $T_\text{IGM}^{-0.7}$ and at $T_\text{IGM}= 10^{4}$K it is equal to $2.6\times 10^{-13}$, therefore it is computed in the code as
+	\begin{align}
+		\alpha_{B}(T)(\si{\cubic\centi\metre\per\second}) &= \frac{2.6\times 10^{-13}*(10^{4})^{0.7}}{T^{0.7}}
+	\end{align}
+	However this also needs to be converted to \si{\cubic\mega\parsec} therefore we divide this equation by $(3.086\times 10^{24})^{3}$. Where the temperature of the IGM relation with redshift, derived from models\cite{2006MNRAS.373.1265O}, is
+	\begin{align}
+		T(z)=70047z^{-1.209}
+	\end{align}
+	To convert this into a rate of recombinations the code treats the recombinations as decays from hydrogen ionized state, with a lifetime of the mean recombination time. Then using the universal decay law the number of recombinations at a time, $t$, is
+	\begin{align}
+		n_{rec}(t)=n_\text{ion}(t)*\e{-t/\overline{t}_{rec}(t)}
+	\end{align}
+	Where we are taking $n_\text{ion}(t)$ to be the number of ionized hydrogen atoms at the time $t$. The code then does as it did in the previous cases but this time the fraction is
+	\begin{align}
+		X(z)=\frac{n_{ion}(z)-n_{rec}(z)}{n_{H}(z)}
+	\end{align}
+	This new outputted data is shown in Figure~\ref{fig:IonizedFraction3}.
+	\begin{figure}[htbp]
+		\centering
+			\begingroup\endlinechar=-1
+				\resizebox{0.7\textwidth}{!}{%
+					\input{GRAPH_recombinations.tex}
+				}\endgroup
+		\caption{Ionized Fraction against redshift with recombinations and escape fraction included\label{fig:IonizedFraction3}}
+	\end{figure}
+	Which gives a redshift value of $7\pm1.8$ when fully ionized. This is still higher redshift than what we would expect it to be from the literature. This is probably mainly due to the large errors in value of the evolving escape fraction. Although it would appear that the first model is the most accurate in this regard it is not a very realistic number due to oversimplifying assumptions made.
+
+	%talk about results
+% subsection including_recombinations (end)
+
+
+

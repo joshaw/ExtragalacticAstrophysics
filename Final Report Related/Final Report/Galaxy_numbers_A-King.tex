@@ -1,0 +1,97 @@
+%!TEX root = mainfile.tex
+
+\section{Galaxy Number Predictions} % (fold)
+\label{sec:galaxy_number_predictions}
+(Andrew with calculations assisted by Owen)
+
+	One of the central tasks of the predictions subgroup is to make informed predictions regarding the distribution of galaxies around and during the epoch of reionization. As previously described, the distribution of galaxies in the early universe can be modelled using a Schechter function
+	\begin{align}
+		\Phi_L = \Phi^*  \left(\frac{L}{L^*}\right)^\alpha \exp{\left( -\frac{L}{L^*} \right)} \frac{1}{L^*}
+	\end{align}
+	Ultimately, it will be necessary to resort to numerical calculations to extract meaningful predictions from this model, but it is useful and instructive to begin with an analytical approach.
+
+	\subsection{Analytical Approach} % (fold)
+	\label{sub:analytical_approach}
+		We use the Schechter function to decribe the number density of galaxies per unit luminosity; in order to extract a true number density from this we must integrate across the relevant range of luminosities
+		\begin{align}
+			n = \int_{L_1}^{L_2}\Phi_L \d{L}.
+		\end{align}
+		In general, the luminosity function (and, therefore, the number density) will vary as a function of position, $\Phi_L = \Phi_L (L,\underline{\mathbf{r}})$, so in order to extract the number of galaxies in some finite volume we must integrate across the volume
+		\begin{align}
+			N = \int_V n(\underline{\mathbf{r}}) \d{V} ,
+		\end{align}
+		resulting in the double integral
+		\begin{align}
+			N = \int_V \int_{L_1}^{L_2} \Phi_L(L,\underline{\mathbf{r}}) \d{L} \d{V} .
+		\end{align}
+		If the volume of space considered spans a sufficiently large area of sky then we can invoke the large scale isotropy implied by the cosmological principle to argue that, in effect, $\Phi_L$ is not dependent upon the full position vector, $\underline{\mathbf{r}}$, but only its radial component, $r$. Furthermore, since there is a one to one relationship between distance from earth, $r$, and cosmological redshift, $z$, $\Phi_L$ can be expressed as a function of just $L$ and $z$.
+		\begin{align}
+			\Phi_L &= \Phi_L(L,r); \qquad r= r(z);\\
+			\therefore	\Phi_L &= \Phi_L(L,z).
+		\end{align}
+		The inaccuracy of this simplification on smaller scales is considered in more depth in Section~\ref{sec:cosmic_variance}. The volume of integration can then be chosen to be a spherical shell with limits of constant redshift, so that the volume integration may be carried out over concentric and infinitesimal redshift shells
+		\begin{align}
+			N = \int_{z_1}^{z_2} \int_{L_1}^{L_2} \Phi_L(L,z) \d{L} \dx{V}{z} \d{z}.
+		\end{align}
+		From equation~(\ref{eq:comoving_distance}), we know that
+		\begin{align}
+			\dx{r}{z} &= \frac{c}{H(z)}.
+		\end{align}
+		Together with the form of the volume, we can use this to find the derivative $\dx{V}{z}$
+		\begin{align}
+			\dx{V}{z} &= \dx{V}{r} \cdot \dx{r}{z} \\
+		 			&= \dx{}{r} \left[\frac{4}{3} \pi r^3 \right ] \cdot \frac{c}{H(z)}\\
+					&= 4 \pi r^2 \cdot \frac{c}{H(z)} \\
+					\Rightarrow	\dx{V}{z}	&= \frac{4 \pi r^2 c}{H(z)}
+		\end{align}
+		Applying this substitution results in
+		\begin{align}
+					N = \int_{z_1}^{z_2} \int_{L_1}^{L_2} \Phi_L(L,z) \frac{4 \pi r^2 c}{H(z)} \d{L}\d{z}
+		\end{align}
+		Where the value of r is also found using equation~(\ref{eq:comoving_distance})
+		\begin{align}
+			N = \int_{z_1}^{z_2} \int_{L_1}^{L_2} \Phi_L(L,z) \frac{4 \pi c}{H(z)}\d{L}\d{z} \left[ \int_0^{z}\frac{c }{H(z')} \d{z'} \right ]^2
+		\end{align}
+		In practice, luminosities are most commonly measured in terms of absolute magnitude, M, so in order to align with convention we use the magnitude equivalent of the luminosity function and substitute
+		\begin{align}
+			\int \Phi_L \d{L} = \int \Phi_M\d{M} ,
+		\end{align}
+		where
+		\begin{align}
+			\Phi_M = 0.4 \ln(10) \Phi^* 10^{0.4(M^*-M)(\alpha+1)} \exp(-10^{0.4(M^*-M)})
+		\end{align}
+		The full derivation of the magnitude Schechter function is given in appendix~\ref{app:derivation_of_magnitude_schechter_function}. Applying this substitution gives
+		\begin{align}
+			N = \int_{z_1}^{z_2} {\int_{M_1}^{M_2} { \Phi_M(M,z) \frac{4 \pi c}{H(z)} \d{M} \d{z} \left[ \int_0^{z}{\frac{c }{H(z')} \d{z'}}\right ]^2} } .
+		\end{align}
+		Finally, we rearrange to give
+		\begin{align}
+					N = \frac{4 \pi c^3}{H_0^3} \int_{z_1}^{z_2}  \frac{1}{E(z)} \left[ \int_0^{z}{\frac{1}{E(z')} \d{z'} }\right ]^2 \d{z} \int_{M_1}^{M_2} \Phi_M(M,z) \d{M}
+		\end{align}
+	% subsection analytical_approach (end)
+
+	\subsection{Numerical Computation} % (fold)
+	\label{sub:numerical_computation}
+		The complexity of this analytical solution makes it an impractical approach for real calculations, so in most cases numbers of galaxies are computed numerically by splitting the M and z continuum into a two dimensional array of discrete redshift shells and magnitude bins. The resulting summation takes the form
+		\begin{align}
+			N = \sum_i \sum_j \Phi_M(z_i,M_j) \Delta V(z_i) \Delta M_j . \label{eq:galaxy_number_double_sum}
+		\end{align}
+		Where $\Delta V(z_i)$, is the volume of the thin, but finite spherical shell between redshift $z_i$ and $z_{i+1}$, and is calculated using the standard equation for the volume of a spherical shell
+		\begin{align}
+			\Delta V = \frac{4}{3} \pi ( d_{i+1}^3 - d_{i}^3)
+		\end{align}
+		The Schechter parameters used were designed for use with comoving volumes, so the distances used are comoving distances calculated from $z$ using the standard integral relationship given in equation~(\ref{eq:comoving_distance}), which is also solved numerically.
+
+		equation~(\ref{eq:galaxy_number_double_sum}) can be seen as the direct but approximate equivalent of the double integral
+		\begin{align}
+			N = \int_V \int_{M_1}^{M_2} \Phi_M(z,M) \d{M} \d{V} ,
+		\end{align}
+		before it is taken to the continuum limit of infinitesimal $\Delta M$ and $\Delta V$, which makes the calculation mathematically exact.
+
+		In order to carry out these calculations a program was built. The focus of the constructed program was not to calculate any specific result for the number of galaxies in some fixed magnitude and redshift range, but to provide an efficient and adaptable means to calculate the distribution of observable galaxies in any input ranges in the region of cosmic reionization.
+
+		This flexibility allows for the efficient calculation of results tailored for any proposed survey, such that the survey's validity and usefulness can be assessed and determined. The results of these specific calculations and the observing strategies they suggest and inform are discussed in the latter part of this report.
+
+		The variation in the form of the Schechter function was accounted for by including the calculated models for the evolution of the Schechter parameters with redshift in Section~\ref{sec:parameter_values}. The uncertainties in the evolution models were used to calculate upper and lower estimates for the galaxy number predictions, however, the lower estimates were universally zero because of the large uncertainties inherrent to the data currently available. The upper estimate did provide useful results which, in most cases, were approximately triple the value of the best estimate.
+		% subsection numerical_computation (end)
+% section galaxy_number_predictions (end)

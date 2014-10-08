@@ -1,0 +1,5 @@
+The effect of cosmic variance was considered to be a significant factor for
+any observations to be made. 
+Subsequently an empirical formula was located and implemented in the code
+to address cosmic variance, giving it as an estimated percentage of the 
+number of galaxies expected in the survey area.

@@ -1,0 +1,92 @@
+
+\subsection{Including Recombinations}
+To include Recombinations into our project, we need the rate at which hydrogen will recombine.\\
+The mean recombination time, \cite{2012ApJ...746..125H}, has the form
+
+\begin{equation} 
+\bar{t}_{rec}= [1.08<n_{H}>\alpha_{B}C]^{-1}
+\end{equation}
+
+Where C is the clumping factor the IGM, $\alpha_{B}$ is the recombination coefficient for excited states of hydrogen and the 1.08 accounts for the presence of photoelectrons from singly ionized helium. \\
+Values of the clumping factor against redshift are the ones used in section (Lewis's). The recombination coefficient for excited hydrogen is cited from \cite{1993PhyA..192..249L} and is proportional to $T_{IGM}^{-0.7}$ and at $T_{IGM}= 10^{4}K$ it is equal to $2.6\times 10^{-13}$, therefore it is computed in the code as
+
+\begin{equation}
+\alpha_{B}(T)(cm^{3}s^{-1})=\frac{2.6\times 10^{-13}*(10^{4})^{0.7}{T^{0.7}}
+\end{equation}
+However this also needs to be converted to $Mpc^{3}$ therefore we divide this equation by $(3.086\times 10^{24})^{3}$.\\
+
+Where the temperature of the IGM relation with redshift, derived from models from \cite{2006MNRAS.373.1265O}, is 
+\begin{equation}
+T(z)=70047z^{-1.209}
+\end{equation}
+
+
+To convert this into a rate of recombinations the code treats the recombinations as decays from hydrogen ionized state, with a lifetime of the mean recombination time. Then using the universal decay law the number of recombinations at a time t is
+
+\begin{equation}
+n_{rec}(t)=nion(t)*e^{-t/\bar{t}_{rec}(t)}
+\end{equation}
+Where we are taking the $n_{ion}(t)$ to be the number of ionized hydrogen atoms at the time t.\\
+The code then does as it did in the previous cases but this time the fraction is
+
+\begin{equation}
+X(z)=\frac{n_{ion}(z)-n_{rec}(z)}{n_{H}(z)}
+\end{equation}
+
+This new outputted data is shown in figure \ref{fig:IonizedFraction3}.\\
+
+\begin{figure}
+	\centering
+		\includegraphics[width=\textwidth]{F:/Extragalactic cosmology/IonizedFraction3.png}
+	\caption{Ionized Fraction against redshift with recombinations and escape fraction included}
+	\label{fig:IonizedFraction3}
+\end{figure}
+
+Which gives a redshift value of $7\pm1.8$ when fully ionized. This is still higher redshift than what we would expect it to be from the literature. This is probably mainly due to the large errors in value of the evolving escape fraction. Although it would appear that the first model is the most accurate in this regard it is not a very realistic number due to oversimplifying assumptions made.\\ 
+
+
+@ARTICLE{2012ApJ...746..125H,
+   author = {{Haardt}, F. and {Madau}, P.},
+    title = "{Radiative Transfer in a Clumpy Universe. IV. New Synthesis Models of the Cosmic UV/X-Ray Background}",
+%  journal = {\apj},
+archivePrefix = "arXiv",
+   eprint = {1105.2039},
+ primaryClass = "astro-ph.CO",
+ keywords = {cosmology: theory, diffuse radiation, intergalactic medium, galaxies: evolution, quasars: general},
+     year = 2012,
+    month = feb,
+   volume = 746,
+      eid = {125},
+    pages = {125},
+      doi = {10.1088/0004-637X/746/2/125},
+   adsurl = {http://adsabs.harvard.edu/abs/2012ApJ...746..125H},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{1993PhyA..192..249L,
+   author = {{Leonhardt}, U. and {Ebeling}, W.},
+    title = "{Ionization and recombination coefficients of excited states in nonideal hydrogen plasmas}",
+  journal = {Physica A Statistical Mechanics and its Applications},
+     year = 1993,
+    month = jan,
+   volume = 192,
+    pages = {249-261},
+      doi = {10.1016/0378-4371(93)90154-V},
+   adsurl = {http://adsabs.harvard.edu/abs/1993PhyA..192..249L},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{2006MNRAS.373.1265O,
+   author = {{Oppenheimer}, B.~D. and {Dav{\'e}}, R.},
+    title = "{Cosmological simulations of intergalactic medium enrichment from galactic outflows}",
+%  journal = {\mnras},
+   eprint = {arXiv:astro-ph/0605651},
+ keywords = {methods: numerical, galaxies: formation, galaxies: high-redshift, intergalactic medium, cosmology: theory},
+     year = 2006,
+    month = dec,
+   volume = 373,
+    pages = {1265-1292},
+      doi = {10.1111/j.1365-2966.2006.10989.x},
+   adsurl = {http://adsabs.harvard.edu/abs/2006MNRAS.373.1265O},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}

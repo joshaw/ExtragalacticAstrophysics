@@ -1,0 +1,17 @@
+Please add here any submissions that you make, so that the editors can keep trac of whats been added.
+Also, if you make a change to a submission, can you add that to the list as well.
+
+This'll act as a ToDo list, so as things are completed they'll be deleted from here. Thanks
+-----------------------------------------------------------------------------------------------------
+Hi Josh, both of my documents (colour and 21cm) have changed considerably, the colour document should be ready for the graphs which you're going to plot. I'm going to keep on changing them throughout the day. No References yet, but I'm on it! Hope you're doing well! Joe
+
+
+Included my second submission in the same folder - references are still not right and figures are all over the show (and gaps for graphs im *hoping* 
+youll have time to do) owen. (PS - two very small sections that im waiting on lewis to help me with (my fault not his))
+
+
+hi Josh i've made some changes. Exposure time paragraph1, mirror reflectivity, CCDs p2, p4 (in p3 photosites should be spelt without a hyphen), dark current p2 should be below figure 16, sky background section should be after dark current with figure 22 after p2, equations 21.2, 21.3 & current 23.3 have been amended. Calculating exposure time final paragraph and adaptive optics p1 has been changed, the blank reference in overheads is 17 on my list, in seeing, figure ?? is 18 (the one below) and figure 20 should be above p2 in adaptive optics.Also could you make figure17 smaller and finally, if possible, could you put the zodiacal light pics (23 & 24) together(sky background) underneath a combined p3 & p4. If not can i have f23 under p3 and f24 under p4. Also f22 should be below p2 and i've made a small change to sky background section (see changes-rahim). Also some of my section is duplicated at the end and can i have a subscript of {pix} on the N of equation 20.10. Very, very, very sorry about the hassle (changes are in group studies rahim). Rahim   
+
+
+Hey josh, Under OwensSubmission, theres a file called owenssubmission. It is, believe it or not, my submission :P Still very rough as you will inevitably see but ill get on to the regions in capital letters ASAP.
+

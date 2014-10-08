@@ -1,0 +1,29 @@
+%!TEX root = mainfile.tex
+
+\subsubsection{Full Width at Half Maximum} % (fold)
+\label{sub:full_width_at_half_maximum}
+	To accurately calculate the FWHM of the galaxies it is essential to model them as extended bodies rather than point sources. To do this the angular size that a galaxy would subtend on the sky is calculated. The first requirement of this is to determine the size of an average galaxy. There have been limited detections of high redshift galaxies and even fewer have had their parameters defined using spectroscopy. Using values based on confirmed galaxies at redshifts of 6 and candidates at higher redshifts\cite{Ono_FWHM}\cite{Bouwens_FWHM}\cite{Jiang_FWHM} the diameter of a galaxy is fixed at 1.5\,kpc for all redshifts.
+
+	To avoid unnecessarily complex calculations a cosmological calculator\cite{Ned_Calc} is used to calculate the angular scale \si{\kilo\parsec\per ''} at the given redshifts, a plot of these values is shown in Figure~\ref{fig:redshift_vs_angular_size}.
+	\begin{figure}[htbp]
+		\centering
+			\begingroup\endlinechar=-1
+				\resizebox{0.6\textwidth}{!}{%
+					\input{GRAPH_fwhm_M-ONeill_linear.tex}
+				}\endgroup
+		\caption{A graph showing angular size of target galaxy as a function of redshift.\label{fig:redshift_vs_angular_size}}
+	\end{figure}
+
+	This clearly shows a linear trend allowing us to set the FWHM as a simple function of redshift,
+	\begin{align}
+		\text{FWHM}= 0.0238z + 0.1133
+	\end{align}
+	this FWHM function then fits into the CCD equation program. This linear trend matches very well with the theory, as is shown in Figure~\ref{fig:angular_size_function_of_redshift}.
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.4\textwidth]{../Images/angular_size_function_of_redshift.jpeg}
+		\caption{A graph showing variation in angular size as a function of redshift\cite{Sahni_FWHM}.\label{fig:angular_size_function_of_redshift}}
+	\end{figure}
+
+	Here it can be clearly seen that for the redshifts of interest in this study, between 6--15, the angular size to redshift relation will be in the linear regime. Although this graph does not strictly show $z > 10$, the relation remains linear for a great deal longer and is fully applicable for the majority of the observations proposed in this study.
+% subsection full_width_at_half_maximum (end)

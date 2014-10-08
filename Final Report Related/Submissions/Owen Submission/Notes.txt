@@ -1,0 +1,15 @@
+both graphs have axis of star formation rate density (y axis)
+(solar masses per year per megaparsec cubed)
+
+and redshift (x axis)
+
+in graph2 the middle column is critical SFR density and the right most 
+column is simply SFR density.
+
+TITLES:
+GRAPH 1 - Critical Star Formation Rate Density Against Redshift
+GRAPH 2 - Critical Star Formation Rate Density and Star Formation Rate Density against Redshift
+
+
+Thanks!
+

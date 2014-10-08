@@ -1,0 +1,47 @@
+
+The code computes Vega magnitudes.  Conversions between Vega and AB are
+listed in group_studies_example/filters/filters.dat
+
+
+On 6 Feb 2013, at 14:33, Graham Smith wrote:
+
+> 
+> Hi Dorothy
+> 
+> Good question!  
+> 
+> You will get a guide from the published colors of known galaxies.  For 
+> example, Egami et al. (2005) were the first to publish IRAC photometry of 
+> a z>6 galaxy:
+> http://adsabs.harvard.edu/abs/2005ApJ...618L...5E
+> You can check more recent publications of IRAC high-z photometry by 
+> clicking through to the list of papers that cite Egami et al.
+> 
+> A better and more flexible alternative is to do your own calculation.  
+> This is actually more straightforward than it might sound.  Download 
+> this file (which you need to unpack on a linux machine):
+> www.sr.bham.ac.uk/~gps/make_catalog.tgz
+> 
+> It unpacks to a dir called group_studies_example.  You can run the 
+> code by cd-ing to this directory and then type: "./make_catalog", 
+> and then accept the default input parameter file name.
+> 
+> It computes the J, H, K-band mags of a H=28 galaxy at z=10 that formed 
+> its stars in a single burst at z=20, assuming no reddening.  Take a look 
+> at catalog.param and the "Make Catalog" section of the hyperz manual 
+> here: http://webast.ast.obs-mip.fr/hyperz/
+> 
+> You can use make_catalog to make a large random catalog of synthetic 
+> galaxy photometry, however you can also use it in the very simplified 
+> way that I've specified in the tar file.
+> 
+> If you want to calculate IRAC colors then you just need to add IRAC 
+> transmission curves to the filter files and update the list of filters 
+> you want to use in filters.param.  IRAC transmission curves are here 
+> (scroll down):
+> http://www.astro.caltech.edu/~capak/cosmos/filters/
+> 
+> Hope this helps.  Melissa and Al can help you further, in person, this 
+> week.  Let me know how you get on.
+> 
+> Graham.

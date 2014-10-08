@@ -1,0 +1,48 @@
+%!TEX root = mainfile.tex
+
+\section{Assumptions Made} % (fold)
+\label{sec:assumptions_made}
+(Josh)
+
+	The mathematical model that has been used in the program is limited by certain assumptions about the universe that have been worked in. Some of these are generally held to be true and are accepted widely in the scientific community, others are due to the constraints of what can mathematically be programed and the observational data available from previous studies. A major assumption that has been made throughout the project on reionization concerns the type of universe that we exist in. A related pair of assumptions which have firm mathematical basis are the ``Cosmological Principle'' and the ``Isotropic Universe Theorem''. These state that our observations, as made from the Earth, are not subject to any influence from our location within it, in other words, we are not in a privileged position in the universe. This is assumed for almost all cosmological studies and shall not be considered.
+
+	An important assumption that must be made is that the Schechter function that is used describes the universe sufficiently to make predictions from. This is not as trivial as it sounds since the function is derived from data collected from much lower redshifts than some that we are considering. Further data will allow the accuracy of these functions to be improved. Data and mathematical contributions have been collected from a number of high redshift studies to attempt to reduce the possibility of error and increase the accuracy of the magnitude function to as high a redshift as possible.
+
+	For the early stages of this investigation, it has  been assumed that both parameter evolution and cosmic variance do not influence the results. Clearly, these are big assumptions to make and so will be integrated into the calculations at later stages. This will be discussed further later.
+
+	\subsection{AB Magnitude} % (fold)
+	\label{ssub:ab_magnitude}
+		In order to keep consistency between the parts of this project, the AB magnitude system has been used throughout. This is a system for measuring the magnitude of an object in the sky. It is defined as
+		\begin{align}
+			M(AB) &= -2.5\log(f_\nu) -48.60 \label{eq:ab_magnitude}
+		\end{align}
+		where $f_\nu$ is the monochromatic flux measured in \si{\erg\per\second\per\square\centi\metre\per\hertz}.
+	% subsubsection ab_magnitude (end)
+
+	\subsection{Cosmological Parameters} % (fold)
+	\label{ssub:cosmological_parameters}
+		In addition to the parameters of the Schechter function, there are a number of cosmological parameters that govern the relative fractions of matter, radiation and dark energy in the universe for any given redshift. These are defined as functions of redshift in equation~(\ref{eq:fraction_with_redshift}).
+
+		At the current redshift, $z=0$, the universe is flat and so the total density parameter is defined as
+		\begin{align}
+			\Omega &= \frac{\rho}{\rho_{\text{crit}}}
+		\end{align}
+		where $\rho_{\text{crit}}$ is the density required for a flat universe, meaning that the total density is required to be unity. Thus, the sum of the separate density parameters must be 1.
+		\begin{align}
+			\Omega &= \Omega_\text{M} + \Omega_\text{R} + \Omega_\Lambda \label{eq:fraction_with_redshift}
+		\end{align}
+		The values of each of these parameters varies with redshift. These relations account for the changes in the geometry of the universe. The values that have been used are shown in equations~\ref{eq:omega_m} to~\ref{eq:omega_lambda}, along with the relations that govern their evolution with time, in accordance with the $\Lambda$CDM model\cite{modern_astrophysics_bradley}.
+		\begin{align}
+			\text{Matter Density}, 		&& \Omega_{\text{M},0} 	&= 0.27\pm 0.04,			& \Omega_\text{M} &= \Omega_{\text{M},0}{(1+z)}^3 \label{eq:omega_m}\\
+			\text{Radiation Density}, 	&& \Omega_{\text{R},0}	&= 8.24\times 10^{-5}, 	& \Omega_\Lambda  &= \Omega_{\Lambda,0} \label{eq:omega_r}\\
+			\text{Dark energy Density}, 	&& \Omega_{\Lambda,0} 	&= 0.73\pm 0.04,			& \Omega_\text{R} &= \Omega_{\text{R},0}{(1+z)}^4 \label{eq:omega_lambda}
+		\end{align}
+
+		Together, these values set the Hubble parameter, and so this parameter can be written in terms of the current values of the parameters, and redshift, as shown in equation~(\ref{eq:hubble_parameter})\cite{hubble_parameter_astro_journal}.
+		\begin{align}
+	        H^2(z) &= H_0^2\left( \Omega_M {(1+z)}^3 + \Omega_R {(1+z)}^4 + \Omega_{\Lambda} \right) \label{eq:hubble_parameter}
+    	\end{align}
+
+    	It has been assumed that the universe has a curvature of, or very close to, zero\cite{1102.4485}, in other words, that the universe is flat. This has been shown before and is generally held to be true, ``we now know that the universe is flat with only a 0.4\% margin of error''\cite{nasa_uni_shape}. This means that the effects of observing objects near the beginning of the universe when it might have had different properties do not need to be taken account of .
+	% subsection cosmological_parameters (end)
+% section assumptions_made (end)

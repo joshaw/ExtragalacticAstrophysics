@@ -1,0 +1,86 @@
+%!TEX root = Management_Plan.tex
+
+\begin{landscape}
+	\begin{figure}[ftbp]
+		\begin{center}
+
+			\begin{ganttchart}[	y unit title=0.4cm,
+								y unit chart=0.5cm,
+								x unit = .3cm,
+								hgrid, 
+								vgrid={dotted, draw=none},
+								title label anchor/.style={below=-1.6ex},
+								title left shift=.05,
+								title right shift=-.05,
+								title height=1,
+								bar/.style={fill=gray!40},
+								incomplete/.style={fill=white},
+								progress label text={},
+								bar height=0.5,
+								today=8,
+								group right shift=0,
+								group top shift=.6,
+								group height=.2,
+								group peaks={}{}{.2}]{66}
+				%labels
+				% \gantttitle{Week 	}{66} \\
+				\gantttitle{January}{16} 
+				\gantttitle{February}{28} 
+				\gantttitle{March}{22} \\
+				\gantttitlelist{16,18,...,30}{2}
+				\gantttitlelist{01,03,...,27}{2}
+				\gantttitlelist{01,03,...,21}{2} \\
+			
+				%tasks
+				\ganttgroup{Overall}{1}{66} \\
+					\ganttbar{Management plan}{1}{8} \\
+					\ganttbar{Worksheet Q1-3}{1}{10} \\
+					\ganttbar{Worksheet Q4-5}{10}{19} \\
+					\ganttmilestone{Finished worksheet}{20} \\
+					\ganttmilestone{Progress Review}{21} \\
+					\ganttbar{Seminar prep + deliver}{38}{42} 
+					\ganttmilestone{}{56} \\
+					\ganttbar{Personal statement}{50}{58} \\
+					\ganttmilestone{Deliver viva}{59} \\
+					\ganttbar{Report to editors}{62}{65} \\
+					\ganttmilestone{Hand in report}{66} \\
+				\ganttgroup{Predictions}{1}{58} \\
+					\ganttbar{Determine goals}{1}{4} \\
+					\ganttbar{Research}{5}{13} \\
+					\ganttbar{Design plan and review}{8}{12}
+					\ganttmilestone{}{21} \\
+					\ganttbar{Program alpha}{13}{18} 
+					\ganttmilestone{}{18} \\
+					\ganttbar{Test alpha}{17}{24} \\
+					\ganttbar{Program beta (extensions)}{24}{40} \\
+					\ganttbar{Test beta}{30}{40} \\
+					\ganttbar{Final program}{38}{49} \\
+					\ganttbar{Report writing}{45}{58} \\
+				\ganttgroup{Observations}{1}{58} \\
+					\ganttbar{Worksheet Q5}{7}{10}\\
+					\ganttbar{Research target objects}{11}{49} \\
+					\ganttbar{Research telescopes/missions}{11}{49} \\
+					\ganttbar{First Calculations}{11}{21} \\
+					\ganttbar{Research Spectroscopy}{30}{50} \\
+					\ganttbar{Research contamination}{30}{50} \\
+					\ganttbar{Report writing}{45}{58} 
+
+				%relations 
+				\ganttlink{elem1}{elem5} 
+				\ganttlink{elem4}{elem5} 
+				\ganttlink{elem2}{elem3} 
+				\ganttlink{elem7}{elem9} 
+				\ganttlink{elem8}{elem9} 
+				\ganttlink{elem3}{elem4} 
+				\ganttlink{elem6}{elem7} 		%seminar prep-deliver
+				\ganttlink{elem10}{elem11}		%report hand in 
+				\ganttlink{elem15}{elem16}		%design-review
+				\ganttlink{elem23}{elem10} 		%theory report to editors
+				\ganttlink{elem31}{elem10} 		%obs report to editors
+				\setganttlinklabel{f-f}{}       %diagonal
+				\ganttlink[link type=f-f]{elem17}{elem28} 
+				% \ganttlink{elem17}{elem28} 
+			\end{ganttchart}
+		\end{center}
+	\end{figure}
+\end{landscape}

@@ -1,0 +1,36 @@
+%!TEX root = mainfile.tex
+
+\newpage
+\section{Derivation of Thermal Background} % (fold)
+\label{app:derivation_of_thermal_background}
+(Mike)
+
+	Number of incident photons, $N_{\gamma}$, is
+	\begin{align}
+		N_{\gamma} &= \int_{\nu_1}^{\nu_2} \frac{\epsilon B_\nu(T)}{h\nu}\d{\nu}
+	\end{align}
+	This integral spans the filter from the red to the blue end, where $\nu$ is the frequency of light, $h$ is Planck's constant and $B_\nu$ is given by:
+	\begin{align}
+		B_\nu(T) &= \frac{2h\nu^3}{c^2}\frac{1}{\e{\frac{h\nu}{kT}}-1}
+	\end{align}
+	where $c$ is the speed of light, $T$ is the temperature of, $k$ is Boltzmann's constant and $\e{\frac{h\nu}{kT}} \ll 1$. Using the substitution
+	\begin{align}
+		x = \frac{h\nu}{kT}, \qquad \nu &= \frac{kTx}{h} \\
+		\Rightarrow \d{\nu} &= \frac{kT}{h}\d{x}
+	\end{align}
+	$B_\nu(T)$, then, is
+	\begin{align}
+		B_\nu(T) &= \frac{2k^3 T^3 x^3}{h^2 c^2} \frac{1}{\e{x}}
+	\end{align}
+	Thus, the number of photons is given by
+	\begin{align}
+		N_\gamma &= \frac{2 k^3 T^3\epsilon}{h^2 c^2} \int_{x_1}^{x_2}x^2 \e{-x}\d{x} \\
+			&= \frac{2 k^3 T^3\epsilon}{h^2 c^2} {\left[ -x^2 \e{-x} + \int \e{-x}\cdot 2x\d{x} \right]}_{x_1}^{x_2} \\
+			&= \frac{2 k^3 T^3\epsilon}{h^2 c^2} {\left[ -x^2 \e{-x} -2x\e{-x} + \int 2\e{-x}\d{x} \right]}_{x_1}^{x_2} \\
+			&= \frac{2 k^3 T^3\epsilon}{h^2 c^2} {\Big[ -\e{-x}\left( x^2 + 2x + 2 \right) \Big]}_{x_1}^{x_2}
+	\end{align}
+	By integrating from the blue end of the filter to the red, we can remove the negative sign to give
+	\begin{align}
+		N_\gamma &= \frac{2 k^3 T^3\epsilon}{h^2 c^2} {\Big[\e{-x}\left( x^2 + 2x + 2 \right) \Big]}_{x_1}^{x_2}
+	\end{align}
+% section derivation_of_thermal_background (end)

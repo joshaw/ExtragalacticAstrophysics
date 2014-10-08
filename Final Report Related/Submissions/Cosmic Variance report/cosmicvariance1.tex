@@ -1,0 +1,85 @@
+\documentclass [a4paper, 12pt] {article}
+
+\usepackage {graphicx}
+\usepackage{fullpage}
+
+\begin{document}
+
+\section{Cosmic Variance}
+
+In general, the Universe can only be considered to be homogeneous at the most extreme distance scales ($>1 Gpc$). At the scales which tend to be observed, matter in the Universe is not distributed uniformly and will gather together in massive clusters. Conversely, there will be empty regions of space, known as voids, where virtually no matter is present at all. 
+\\
+\newline
+Measurements deduced from observational surveys will certainly be affected by this large-scale cosmic structure. A measurement of an arbitrary region of the sky will have an associated uncertainty far greater than any sample variance due to Poisson statistics. This uncertainty is known as \emph{Cosmic Variance}, and will nearly always be the dominant source of error for any high-redshift cosmic survey. Given a probability distribution for the number counts, the cosmic variance is defined as:
+
+\begin{equation} \label{eq:cvstat}
+\sigma _v^2= \frac{\left \langle N^2 \right \rangle - \left \langle N \right \rangle^2}{\left \langle N \right \rangle}-\frac{1}{\left \langle N \right \rangle}
+\end{equation}
+\\
+\newline
+where $\left \langle N \right \rangle$ is the mean and $\left \langle N^2 \right \rangle$ is the variance\cite{Trenti2008}.
+\\
+\newline
+Any number or density measurement derived from a galaxy population is susceptible to cosmic variance. As an extreme example, it is reported to be potentially at the 50-70\% level in the HST UDF surveys\cite{Driver01102010}. Evidently, it will be particularly relevant to this study of cosmic reionization.
+
+
+\subsection{Factors which affect the Cosmic Variance}
+Fortunately, there exist numerous ways of reducing the cosmic variance of a galaxy survey to a manageable amount, mostly accepted to be $<10\%$. As a general rule, this is achieved when a volume of $10^7 Mpc^3$ is surveyed, with a square survey area over a single contiguous region\cite{Driver01102010}.
+\\
+\newline
+The cosmic variance of a survey depends on three factors principally:
+\begin{itemize}
+\item it decreases steadily with volume
+\item it is reduced for higher aspect ratio surveys
+\item it is also reduced when multiple sightlines are taken i.e. sparse sampling
+\end{itemize}
+Taking advantage of these factors, one can take steps to address the issue of cosmic variance.
+\subsubsection{Survey Volume}
+As mentioned above, the cosmic variance is heavily dependent on the volume of the survey, indicated by the steady decrease to lower percentages as larger volumes are surveyed, as in~Figure \ref{fig:cv1}.  For volumes of $10^4 Mpc^3$, it is as much as 60\% whereas for $10^7Mpc^3$, it will be 10\% and below.
+\\
+\newline
+The dashed line below the main trend on the graph shows how the percentage uncertainty varies solely due to the sample variance. This gives some idea of the gulf between the effect of cosmic variance and that of Poisson statistics.
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.75]{cv1.JPG}
+\end{center}
+\caption{Graph showing the relation between the percentage cosmic variance and survey volume.}\label{fig:cv1}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.75]{cv2.JPG}
+\end{center}
+\caption{The same as for graph 1, this time with the additional grey points showing the dependence on aspect ratio. From the top to bottom they are 1:2, 1:4, 1:8, 1:16, 1:32, 1:64, 1:128.}\label{fig:cv2}
+\end{figure}
+\subsubsection {Aspect Ratio}
+
+The aspect ratio of the survey is another crucial factor that can help deal with cosmic variance. For the same survey area, a long thin strip chosen over a standard square-shaped survey will decrease the cosmic variance. When taken to the extreme, this can cause a significant reduction. The same trend as for~Figure \ref{fig:cv1} is shown in~Figure \ref{fig:cv2}, but with the grey dots corresponding to higher aspect ratio surveys. The graph illustrates that, particularly for larger volumes, increasing the aspect ratio of a survey can make a huge reduction in the cosmic variance uncertainty.
+
+\subsubsection {Sparse Sampling}
+One might tackle cosmic variance in a very effective manner via the method of \emph{sparse sampling}, whereby several identical observing areas are distributed randomly across the sky. As opposed to one contiguous survey, these multiple sightlines in different directions allow a more representative portion of the sky to be surveyed. 
+\\
+\newline
+It has been shown that cosmic variance is reduced with the number, $N$ of such sightlines by $\frac{1}{\sqrt{N}}$. This holds irrespective of the base survey area\cite{Driver01102010}.
+
+\subsection {General Formula}
+
+In order to address cosmic variance in the code itself, an empirical formula was employed. In a paper (Driver and Robotham, 2010), this formula was derived using data from the SDSS (Sloan Digital Sky Survey), and extrapolated out to higher redshifts\cite{Driver01102010}. Due to its extrapolated nature, it should be noted that this is an approximate formula. Nonetheless, it should output a robust estimate of the cosmic variance for given surveys. Additionally, through it one can deduce possible ways to reduce the cosmic variance to below 10\%.
+
+\begin {equation} \label{eq:cvmain}
+\zeta _{CV}\left ( percent \right )=\frac{\left [ 1.00-0.03\sqrt{X-1} \right ]\cdot \left \{ 219.7-52.4log_{10}\left [ AB\cdot 291.0 \right ] + 3.21log_{10}\left [ AB\cdot291.0 \right ]^{2} \right \}}{\sqrt{NC/291.0}}
+\end {equation}
+\\
+\newline
+The formula employs the median redshift transverse lengths $A$ and $B$, and the radial depth $C$, all given in $Mpc$, to represent the volume of each survey sample. The number of such samples i.e. the number of sightlines is $N$. The aspect ratio is dealt with in the amplitude term at the front of the expression, where the aspect ratio 1:128 would be submitted as $X=128$, for example.
+\\
+\newline
+Although it is extrapolated from an equation that applies at $z<0.1$, it takes advantage of the fact that cosmic variance should vary according to Poisson statistics along the radial length. This means that a survey with twice the radial depth will have $\sqrt{2}$ less cosmic variance. Hence the factor of $\sqrt{C}$ in the denominator.~Equation \ref {eq:cvmain} does not, however, make any corrections for the evolution of the clustering signature of the galaxy population, with this expected to be lower towards higher redshift. Correspondingly, any estimate output should be treated as an upper limit.
+\\
+\newline
+This equation has been entered into the code which, from the survey parameters input, calculates the required quantities and gives an estimate of the cosmic variance as a percentage of the number counts expected to be observed. Furthermore, it will inform the user of how many random pointings of such a survey are necessary to achieve $<10\%$ cosmic variance.
+
+\end{document}
+
+%written and researched by Lewis Clegg, coded by Andy King.

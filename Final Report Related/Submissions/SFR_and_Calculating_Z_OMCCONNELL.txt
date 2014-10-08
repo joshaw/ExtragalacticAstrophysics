@@ -1,0 +1,62 @@
+\subsection{Rate of Reionizing photons}
+
+With a knowledge of the luminosity density, it is possible to calculate the star formation rate density, using the following formula. 
+\begin{equation}
+\rho_{SFR}=1\times 10^{-28}\rho_L
+\end{equation}
+Using estimates of the fractional escape and zeta, we can use the formula above (7.7) to calculate the rate of reionization. From this, and the number of neutral hydrogen particles in the universe, it is possible to calculate the timescale of reionization. 
+
+\begin{equation}
+t =\frac{dNion}{dt}\times \frac{1}{N_H}
+\end{equation}
+Where t is the time between the start of reionization and the end, in seconds, Nion is the number of ionizing photons produced and $N_H$ is the number of Hydrogen atoms in the universe. \\
+\newline
+As the number of photons produced roughly equalls the number of neutral hydrogen in the universe, it is possible to calculate a limit on the redshift accosiated with the end of reionization, given the corresponding opposite limit. \\
+\newline
+A simulation of this was undergone using the equation above, and the resultant timescale was found to be....
+\subsection{Techniques for Finding a Higher Limit on z}
+
+We know that when $\rho_{SFR}$ and $\rho_{SFR}*$ are equal, reionization will begin. Knowing the Clumping factor (See Section X) it is possible to calculate the critical Star formation rate density, using the following equation:
+
+\begin{equation}
+\rho_{SFR}*=2\times 10^3\frac{C}{f_{esc}}\left (\frac{1+z}{10} \right )^3
+\end{equation}
+Where $f_{esc}$ is the fractional escape of photons from reionizing spheres, and C is the clumping factor. Combining with equation X it is possible to calculate the conditions for which reionization began as follows:
+\begin{equation}
+1\times10^{-28}\int^{\infty}_{L}L\phi(L) dL=2\times 10^3\frac{C}{f_{esc}}\left (\frac{1+z}{10} \right )^3
+\end{equation}
+Solving this equation, will give an upper z limit to reionization, and usign the timescale IN THE PREVIOUS SECTION it is possible to calculate both limits. 
+
+The resultant values for redshift were z+/-z
+
+\subsection{Jeans Mass for collapse and galaxy formation}
+
+The Jeans Mass defines the cirtical mass of a cloud before it can collapse to form a galaxy, thereby limiting the minimum mass of a star foming galaxy. It is defined as the equation below:
+%\begin{equation}
+%M_J=\left ( \frac{5kT}{Gm}\right ) ^{3/2} \left ( \frac{3}{4\pi\rho} \right ) ^{1/2}
+%\end{equation}
+\begin{equation}
+M_J = 5.73\times 10^3\left (\frac{\Omega_mh}{0.15} \right )^{-1/2} \left (\frac{\Omega_b h^2}{0.022}\right )^{-3/5}  \left ( \frac {1+z}{10} \right ) ^{3/2} M_\odot
+\end{equation}
+Assuming an appropriate Mass-Luminosity ratio, this corresponds to an upper limit on both the Luminosity and the Absolute Magnitude (i.e. the dimmest ionizing galaxy.) This therefore provides a lower limit of magnitude to the schechter function, the L specified in the equation in the previous section 
+
+\subsection {Mass-Luminosity Ratios}
+
+An appropriate Mass-Luminosity Formula is:
+\begin{equation}
+L(M) = L_0 \times \frac {(M/M_s)^a} {q+(M/M_s)^{cd}}^{1/d}
+\end{equation}
+where d=0.23, a=40 q=0.57 c=3.57\\
+\newline
+Or you can get the star formation rate of a galaxy from the mass (0911.1356v4) and from this you can obtain the Magnitude Kennicutt 1998 conversion from UV luminosity to AB magnitude and thereby to luminosity. 
+
+\subsection{Press Schechter Formalism}
+
+PSF is a method of obtaining the number of objects with a specific mass within a certain volume. It assumes that the universe linearly “clumped” at the beginning of the universe, until a point where the density of the clumps break away from the rest of the universal expansion, and is treated as a massive body which collapses rapidly. (this occurs at around $\delta_c$\~1.68 – Gunn and Gott). Press and Schechter suggest a probability distribution function of =:
+
+\begin{equation}
+p(M,z)=-2p_0 \frac{\Delta P [\delta_v>\delta_c(z)]} {\Delta M} dM
+\end{equation}
+Where $p_0$ is the mean density of the universe, and $\delta_c(z)$ is the overdensity threshold per redshift. P is the cumulative probability distribution of $\delta_v$ (volume)\\
+\newline
+ It is from this that Schechter functions of luminosity and magnitude could arise....

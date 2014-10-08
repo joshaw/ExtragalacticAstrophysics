@@ -1,0 +1,184 @@
+\documentclass[pdf,color]{UoBnote}
+
+\author{Owen McConnell}
+
+\shorttitle{Finding Redshift Limits}
+\title{Cosmic Reionization}
+\date{\today}
+\issue{1}
+
+\begin{document}
+
+%\maketitle
+%\tableofcontents
+%\vspace{1cm}\hrule \vspace{1cm}
+%\newpage
+
+
+
+
+
+
+
+\section{Calculating the timescale of Reionization}
+In the "dark ages" of the universe, when the universe had cooled, and matter had recombined to form neutral hydrogen, the temperature was not high enough to excite either hydrogen or helium out of the ground state, and consequently neither cooled effectively via atomic line emission. Thus no photon had sufficient energy to ionize neutral hydrogen. \\
+\newline
+As stars began forming, the internal temperature of the gas was high enough for atomic line emission to occur, and ionizing photons were produced. At a particular redshift the star formation rate density was great enough to overcome the recombination rate. The star formation rate density at this point corresponds to the \emph{critical star formation rate density}. The star formation rate decreases with redshift, and conversely, the critical star formation rate increases, due to it proportionality with the clumping factor. (SEE LEWIS' SECTION)
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Critical Star Foormation Rate Density}
+The critical star formation rate density was found by an analytical model, given by the following formula. \cite{Pawlik:2009ij}
+
+\begin{equation}
+\rho^*_{SFR} = 0.027 \times f^{-1}_{esc} \left (\frac{C}{30} \right ) \left (\frac{1+z}{7} \right )^3 \left (\frac{\Omega_b h^2}{0.0465} \right )^2 (M_\odot yr^{-1} Mpc^{-3})
+\end{equation}
+where z is the redshift, $\Omega_b$ is the baryonic mass density and C is the clumping factor. DISCUSSED IN LEWIS' SECTION The graph of $\rho^*_{SFR}$ was plotted see Figure (X)\\
+\newline
+GRAPH 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%  -----------------------------  %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%  INSERT PICTURE OF P_CRIT HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%  -----------------------------  %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Star Formation Rate Density}
+For The star formation rate density was approximated from the luminosity density, as per equation (X) \cite{interactions_and_Induced_Star_Formation}
+\begin{equation}
+\rho_{SFR}(M_\odot yr^{-1} Mpc^{-3})=1\times 10^{-28} \rho_L 
+\end{equation}
+where $\rho_L$ is spectral luminosity density in the region of $2150\pm 650 \AA$ in units of $(ergs \ s^{-1} Hz^{-1} Mpc^{-3})$. Within this region it was assumed that the spectral luminosity density is constant. It was calculated from the integral of the Schechter function, multiplied by the luminosity (See Figure X.X), in terms of spectral luminosities. Since the characteristic magnitude parameters of the Schechter function were obtained in terms of AB Magnitudes, a conversion between AB Magnitudes and Spectral Luminosities was used. SEE NEXT 2 FORMULAE
+\begin{equation}
+F_v = 10^{0.4(5-AB-48.6)} 
+\end{equation}
+Where $F_v$ is the Spectral Flux Density in units of $(ergs \ s^{-1} Hz^{-1} cm^{-2})$ and AB is a monochromatic AB Magnitude. SEE APPENDIX 2. This was used in conjunction with
+\begin{equation}
+L_v=4\pi D_L^2 F_v
+\end{equation} 
+Where $L_v$ is a Spectral Luminosity in units of $ergs \ s^{-1}$, and $D_L$ if the luminosity distance of 10 parsecs $(3.086\times10^19 cm)$ \\
+\newline
+The lower luminosity limit on the Schechter function in Figure (X.X) corresponds to the spectral luminosity of galaxies with the smallest mass possible, discussed in NEXT SECTION
+\subsubsection{Minimum Galaxy Mass}
+In order to find the minimum mass, the redshift at which the Jeans mass(equation (X)) and the characteristic mass of a dark matter halo, (equation(X)), were equal, was considered.\cite{Barkana2001125}
+
+\begin{equation}
+M^*=10^{13}h^{-1}(1+z)^{-4} M_\odot
+\end{equation}
+
+The Jeans Mass defines the critical mass of a cloud at which it will collapse to form a galaxy, thereby limiting the minimum mass of a star forming galaxy.\cite{Barkana2001125}
+\begin{equation}
+M_J\approx 5.73\times10^3 \left (\frac{1+z}{10} \right )^{3/2} M_{\odot}
+\end{equation}
+At the redshift at which these equations are equal, the mass of the galaxy was assumed to be separate and distinct from the rest of the mass of the universe. This assumption ensured that no additional matter could contribute to the mass of the gas after this point. The redshift at which this occurs was calculated to be z=106. This corresponds to a minimum mass of a galaxy of $M=1.1\times10^5M_\odot$.\\
+\newline
+Adopting a Mass-Luminosity ratio of 1:1 for simplicity, the minimum mass was found to correspond to an upper limit on the luminosity of the galaxy of $1.1\times 10^5 L_\odot$. However this was a bolometric luminosity, representing power over all frequencies, as opposed to a spectral luminosity, the power at  a specific frequency. Thus, a conversion between bolometric luminosity and spectral luminosity was formulated. SEE NEXT SECTION
+
+\subsection{Bolometric Luminosity to Spectral Luminosity}
+In order to deduce a relation between bolometric luminosity and spectral luminosity, it was necessary to approximate the shape of the spectrum of a typical galaxy. A blackbody spectrum of temperature $1\times 10^5$K. was used to represent this spectrum, as this temperature corresponds to the temperature of a source emitting at $2150\AA$ using
+\begin{equation}
+\frac{3}{2}kT=hv
+\end{equation}
+\newline
+where k is the Boltzmann Constant $(=1.38\times10^{-23} \ m^2 \ kg \ s^{-2} \ K^{-1})$, T is the temperature (K), h is the Planck's constant $(=6.63\times 10^{-34} \ m^{2} \ kg \ s^{-1})$ and v is frequency (Hz). As spectral luminosity is luminosity per unit frequency, it can be written that
+\begin{equation}
+\int^{\infty}_{-\infty}L_v dv = \int^{\infty}_{0}L_v dv = L_{Bol}
+\end{equation} 
+where $L_{Bol}$ is the bolometric luminosity, in units of $ergs \ s^{-1}$. The intensity of a blackbody is proportional to the spectral luminosity, at a constant solid angle and surface area, therefore it follows 
+\begin{eqnarray}
+L_v= kI(v,T) \\
+\int^{\infty}_{0}L_v dv=L_{bol} \\
+k\int^{\infty}_{0}I dv=L_{bol} \\
+L_v = \frac{I(v,T)}{\int^{\infty}_{0}I dv} \times L_{bol}
+\end{eqnarray}
+where k is a constant, and $I(v,T)$ is the intensity as a function of frequency and temperature in units of $ergs \ s^{-1} \Omega^{-1} cm^{-2} Hz^{-1}$. $L_{Bol}/k$ was computed to be 75224.6 $ergs \ s^{-1} \Omega^{-1} cm^{-2}$ The intensity of a blackbody against frequency is as shown in Figure X.
+\begin{equation}
+I(v,T)=\frac{8\pi v^2}{c^3}\frac{hv}{e^\frac{hv}{kT}-1}
+\end{equation}
+where, within $I(v,T)$, $v$ is the frequency in Hertz corresponding to $2150\pm 650 \AA$, and T=$1.1\times 10^5K$. The lower limit of spectral luminosity in the UV range, corresponding to 2150$\AA$, therefore, was calculated to be $L_v =9.755\times 10^{21} ergs \ s^{-1} Hz^{-1}$.
+\clearpage
+\subsection{Upper Redshift Limit of Reionization}
+In order to compute the luminosity density - it was necessary to convert the Schechter function integral into a gamma function. See APPENDIX 1.
+This permitted the actual star formation rate density to be computed. Subsequently both star formation rate density and critical star formation rate density were plotted against redshift in Figure (X.X)
+
+GRAPH2\\
+\newline
+As mentioned above the redshift at which the star formation rate density exceeds the critical star formation rate density will mark the beginning of reionization. This redshift corresponds to the point in Figure X, where the two curves intersect. The resultant redshift was found to be $z=17.82$.
+
+
+
+\section{Appendix 1 - Schechter Function to Gamma Function}
+
+\begin{eqnarray}
+\rho_L = \int^{\infty}_{L'=L} \phi(L')L'dL'=\ \ \ \ \ \ \ \frac{\phi^*}{L^*}\int^{\infty}_{L'=L}\left (\frac{L'}{L^*} \right )^{\alpha}e^\frac{-L'}{L^*}L'dL'\\
+= \ \ \ \frac{\phi^*}{L^*}\int^{\infty}_{L'=L}\left (\frac{L'}{L^*}\right )^{\alpha}e^\frac{-L'}{L^*}\frac{L'L^*}{L^*}dL'\\
+= \ \frac {\phi^*}{L^*}\int^{\infty}_{L'=L}\left ( \frac{L'}{L^*} \right )^{\alpha+1}e^\frac{-L'}{L^*}L^{*2}d\frac{L'}{L^*} \\
+= \ \ \ \phi^*L^*\int^{\infty}_{L'=L}\left ( \frac{L'}{L^*} \right )^{\alpha+1}e^\frac{-L'}{L^*}d\frac{L'}{L^*} \\
+= \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \phi^*L^*\Gamma(\alpha+2, L/L^*)
+\end{eqnarray}
+
+
+\section{Appendix 2 - Magnitude to Spectral Luminosity}
+\begin{eqnarray}
+m-M=5(log d_l - 1)\\
+5(1-log (d_l))= M + (48.6+2.5log f_v) \\
+5(1-log (d_l))= M + 48.6 + 2.5(log l_v - log 4\pi - 2 log d_l) \\
+5(1-log (d_l))= M+48.6 + 2.5(log L_v - log 4\pi)
+M+48.6=-2.5 log (\frac{L_v}{4\pi})+5 \\
+M=5-2.5(log (\frac{L_v}{4\pi})) - 48.6
+\end{eqnarray}
+
+\end{document}
+
+
+%and the Absolute Magnitude (i.e. the dimmest ionizing galaxy.) DOES MINIMUM MASS GIVE THIS?
+
+%\subsection{Press Schechter Formalism}
+
+%PSF is a method of obtaining the number of objects with a specific mass within a certain volume. It assumes that the universe linearly “clumped” at the beginning of the universe, until a point where the density of the clumps break away from the rest of the universal expansion, and is treated as a massive body which collapses rapidly. (this occurs at around $\delta_c$\~1.68 – Gunn and Gott). Press and Schechter suggest a probability distribution function of =:
+
+%\begin{equation}
+%p(M,z)=-2p_0 \frac{\Delta P [\delta_v>\delta_c(z)]} {\Delta M} dM
+%\end{equation}
+%Where $p_0$ is the mean density of the universe, and $\delta_c(z)$ is the overdensity threshold per redshift. P is the cumulative probability distribution of $\delta_v$ (volume)\\
+%\newline
+ %It is from this that Schechter functions of luminosity and magnitude could arise....
+
+%WRITE ABOUT THE PROGRAM
+
+
+
+
+%\begin{equation}
+%M_J=\left ( \frac{5kT}{Gm}\right ) ^{3/2} \left ( \frac{3}{4\pi\rho} \right ) ^{1/2}
+%\end{equation}
+%\begin{equation}
+%M_J = 5.73\times 10^3\left (\frac{\Omega_mh}{0.15} \right )^{-1/2} \left (\frac{\Omega_b h^2}{0.022}\right )^{-3/5}  \left ( \frac {1+z}{10} \right ) ^{3/2} M_\odot
+%\end{equation}
+
+
+%IS BOLOMETRIC -> ABSOLUTE? NO ABSOLUDE IS IN A PARTICULAR BAND
+
+
+
+
+%\subsection{Beginning of Reionization}
+%Using estimates of the fractional escape and zeta, we can use the formula (X.X) combined with formula (X.X) to calculate the rate of reionization. From this, and the number of neutral hydrogen particles in the universe, it is possible to calculate the timescale of reionization. 
+%
+%\begin{equation}
+%t =\frac{dnion}{dt}\times \frac{1}{n_H}
+%\end{equation}
+%Where t is the time between the start of reionization and the end, in seconds, nion is the number of ionizing photons produced and $n_H$ is the number of Hydrogen atoms in the universe. \\
+%\newline
+%As the number of photons produced roughly equals the number of neutral hydrogen in the universe, it is possible to calculate a limit on the redshift associated with the end of reionization, given the corresponding opposite limit. \\
+%\newline
+%A simulation of this was undergone using the equation above, and the resultant timescale was found to be NEED TO GIVE FINAL RESULT

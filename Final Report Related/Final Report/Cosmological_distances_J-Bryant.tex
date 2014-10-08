@@ -1,0 +1,32 @@
+%!TEX root = mainfile.tex
+
+\section{Cosmological Distances} % (fold)
+\label{sec:cosmological_distances}
+(Jamie)
+
+	This section introduces some of the important distances used in various prediction calculations. First of all is the comoving distance between two observers at different redshifts. This is calculated via equation~(\ref{eq:comoving_distance})\cite{distance_measures_cosmology}
+	\begin{align}
+		D_{C}(z)=\frac{c}{H_{0}}\int^{z_{2}}_{z_{1}}\frac{\d{z'}}{E(z')} \label{eq:comoving_distance}
+	\end{align}
+	where $E(z)$ is the dimensionless Hubble parameter which is
+	\begin{align}
+		E(z)=\sqrt{\Omega_{M}{(1+z)}^{3}+\Omega_{R}{(1+z)}^{4}+\Omega_{\Lambda}}
+	\end{align}
+	Where $\Omega_{M}$, $\Omega_{R}$ and $\Omega_{\Lambda}$ are the different density parameters for mass, radiation and dark energy respectively.
+
+	To calculate the comoving distance to an object at a particular redshift the integral above must be done for $z_{1}=0$ up to an arbitrary $z$. Comoving distance is the distance between two comoving observers i.e.\ both moving with respect to the Hubble flow (factoring out the expansion of the universe). In the project this has been used to determine a volume of space for a given redshift range. This was done by finding the volume difference between two shells of comoving radius at two different redshifts.
+
+	The luminosity distance is the distance that a photon travels from a source to an arbitrary observer. As a photon will undergo a Doppler shift and be redshifted into longer wavelengths (red part of the spectrum). Therefore the luminosity distance is essentially a redshifted transverse comoving distance\cite{distance_measures_cosmology}, which for a flat universe is the comoving distance therefore
+	\begin{align}
+		D_{L}(z)=(1+z)D_{C}(z)
+	\end{align}
+	In this project the luminosity distance has been used to convert between magnitudes, luminosity and flux.
+
+	Also, the angular diameter distance is simply the proper distance along a radius $r_{e}$ where this is the radius at the time of emission. Therefore angular diameter distance is
+	\begin{align}
+		D_{A} &= r_{e}a_{e} = \frac{a_{0}r_{e}}{1+z_{e}}
+		\intertext{where $a_{0}r_{e}$ in a flat universe is the same as,}
+		D_{A}(z) &= \frac{D_{C}}{1+z}
+	\end{align}
+	This is used to convert angular seperations in telescope images to actual angular seperations and then can determine the size of objects\cite{distance_measures_cosmology}.
+% section cosmological_distances (end)

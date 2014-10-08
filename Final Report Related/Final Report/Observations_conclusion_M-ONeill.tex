@@ -1,0 +1,64 @@
+%!TEX root = mainfile.tex
+
+\section{Final Strategy} % (fold)
+\label{sec:final_strategy}
+(Mike with contributions from all observers)
+
+	In this section the proposal for an observing strategy capable of observing from redshift 6-15 is outlined. This strategy is ambitious, requiring a great deal of time on telescopes which are in high demand; this is an inevitable consequence when wishing to observe such distant times.
+
+	This strategy has 2 parts; firstly photometry, where the dropout method is used to identify Lyman Break Galaxy candidates and secondly spectroscopy which will be used on a selection of these candidates to confirm their redshift and properties.
+
+	\subsection{Phase 1: Photometry} % (fold)
+	\label{sub:phase_1_photometry}
+		Table~\ref{tab:photometry_survey} outline the first phase of the strategy; Photometry
+		\begin{table}[htbp]
+			\begin{center}
+				\begin{tabular}{l|c|c|c}
+					 & Low $z$ survey & Intermediate $z$ survey & High $z$ survey \\
+					 \hline\hline
+					Telescope & JWST & Euclid & JWST \\
+					Redshift range & 6--8.5 & 8.5--10 & 10--15 \\
+					Magnitude depth & 30 & 29.5 & 31.65 \\
+					Galaxies observed & $100.5\pm37.0$ & $138.7\pm100.6$ & $358.1\pm 158.6$ \\
+					No. of filters & 4 & 3 & 4 \\
+					No. of pointings & 15 & 2 & 10 \\
+					Total observing time & \SI{4.0e5}{\second} & \SI{6.0e5}{\second} & \SI{2.0e6}{\second} \\
+					Total days to complete & 6.79 & 10.18 & 33.95 \\
+				\end{tabular}
+			\end{center}
+			\caption{Data outlining the photometry survey.\label{tab:photometry_survey}}
+		\end{table}
+
+		This strategy includes the use of known gravitational lenses to greatly increase the number of observed galaxies in the high redshift survey. The exposures will be dithered in each of the surveys and combined using DRIZZLE, see Section~\ref{ssub:dithering}, this will help reduce a number of the errors. The largest error in the photometry surveys is dominated by the cosmic variance of the samples. Where possible the surveys have been spread over more pointings, in order to reduce this, unless it noticeably increased the time or reduced the number of galaxies observed. The candidates will be selected and the contaminants removed based on criteria, such as colour, outlined in section~\ref{sub:Contanimants}.
+	% subsection phase_1_photometry (end)
+
+	\subsection{Phase 2: Spectroscopy} % (fold)
+	\label{sub:phase_2_spectroscopy}
+		Table~\ref{tab:spectroscopy_survey} outlines the second phase of the strategy; spectroscopy.
+		\begin{table}[htbp]
+			\begin{center}
+				\begin{tabular}{l|c|c|c}
+					 & Low $z$ & Intermediate $z$ & High $z$ \\
+					 & Spectroscopy & Spectroscopy & Spectroscopy \\
+					\hline\hline
+					Telescope & JWST & JWST & JWST \\
+					Galaxies confirmed & 24 & 4 & 48 \\
+					No. of pointings & 4 & 4 & 2 \\
+					Total observing time & \SI{2.4e5}{\second} & \SI{2.72e5}{\second} & \SI{1.25e6}{\second}\\
+					Total days to complete & 4.07 & 4.62 & 21.18
+				\end{tabular}
+			\end{center}
+			\caption{Data outlining the spectroscopy survey.\label{tab:spectroscopy_survey}}
+		\end{table}
+
+		The low and high redshift spectroscopy surveys will be performed using the multi-slit feature of JWST's NIRSpec. This allows for the spectrum of many galaxies to be taken at once, greatly reducing the exposure time. The intermediate redshift survey will be carried out using standard spectroscopy by JWST's NIRSpec. This approach is due to Euclid's FoV being much greater than JWST and there not being enough galaxies per FoV to make it time efficient. The galaxies selected for spectroscopic study in the high redshift survey are located in the 2 most powerful of the gravitational lenses. This will be done with a reduced magnitude limit, 30.5, from the same photometric FoV in order to reduce the time required to observe. Using the observations taken the neutral hydrogen fraction will be studied by a calculation of optical depth between the galaxy and our location.
+	% subsection phase_2_spectroscopy (end)
+
+	\subsection{Project Timescale} % (fold)
+	\label{sub:project_timescale}
+		It is difficult to estimate the overall duration of the project as it is hard to quantify the time required to perform the analysis between the photometry and spectroscopy for each survey. In order to reduce the total time the only sensible step that can be taken is to carry out the intermediate redshift photometry with Euclid during the high redshift photometry with JWST. The total observing time for both photometry and spectroscopy is 68.92\,days, with additional time for the analysis to be performed on each set of results.
+
+		This strategy is solely based on the use of technology which is not yet operational but is planned for deployment within the next decade. There are 2 clear flaws in this; there is a great deal of uncertainty in the telescope parameters, where gaps in the knowledge have been found sensible estimates based on operational technology such as VLT and HST have been made to mitigate as much of the uncertainty as possible. The second flaw is that this greatly increases the timescale of the project; this is an unavoidable consequence of our aim to see such distant redshifts. The current technology has reached its limits and in order to make strides forward it is necessary to embrace the next generation of telescopes and this requires time.
+	% subsection project_timescale (end)
+
+% section final_strategy (end)

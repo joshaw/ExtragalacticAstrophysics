@@ -1,0 +1,20 @@
+%!TEX root = mainfile.tex
+
+\section{Clumping Factor} % (fold)
+\label{sec:clumping_factor}
+(Lewis)
+
+	hydrogen which already has been reionized may still play a significant role in the evolution of the Universe during the epoch of reionization, as it is still possible for it to recombine and become neutral once more. The average rate of recombinations is a significant factor which acts to slow down the expansion of the ionization front into the neutral inter-galactic medium. This rate, in turn, is proportional to a value known as the Clumping Factor. This factor is essentially a measure of the inhomogeneity in a medium, in this case, ionized hydrogen. In the what is known as the density field method, it is simply given by
+	\begin{align}
+		C_{DF} &=\frac{\left \langle n_\text{HII}^2 \right \rangle}{\left \langle n_\text{HII} \right \rangle^2}, \label{eq:clumpingnHII}
+	\end{align}
+	where $n_\text{HII}$ is the number density of ionized hydrogen in the inter-galactic medium, and $\left \langle n_\text{HII} \right \rangle$ is the average of this value\cite{2012ApJ...747..100S}.
+
+	Many analytical and computational models are available which use the clumping factor to correct for recombinations during the reionization process. Some treat it as a global parameter, that is constant at all points in space. However, many believe a single value of the clumping factor will overestimate the recombination rate. Consequently, they choose to adopt a local parameter, which varies due to the density gradient of the inter-galactic medium. This also accounts for the negligible contribution of neutral gas to the recombination\cite{MNL2:MNL2993}.
+
+	Other simulations generate a clumping factor which evolves over the period during which reionization took place. One such model (Iliev et al.~2007) has clumping evolving with redshift as\cite{Pawlik21042009},
+	\begin{align}
+		C &=26.2917\times \e{-0.1822z+0.003505z^2}. \label{eq:clumpingredshift}
+	\end{align}
+	For simplicity, in this project, the simpler method using a global variable was chosen. However, a redshift dependence scenario corresponding to that from equation~(\ref{eq:clumpingredshift}) was adopted, for better accuracy in the evolution of the critical star formation rate.
+% section clumping_factor (end)

@@ -1,0 +1,94 @@
+\newpage
+\section{Derivation of the Gunn-Peterson Optical Depth} % (fold)
+\label{app:derivation_of_the_gunn_peterson_optical_depth}
+	The optical depth, $\tau$, of a medium to light of some frequency, $\nu$, can be calculated using
+	\begin{align}
+		\tau = \sigma(\nu) N ,
+	\end{align}
+	where N is the column density, calculated using
+	\begin{align}
+		N = \int n \d{l} .
+	\end{align}
+	Therefore, for the optical depth of neutral hydrogen in the early universe, we have
+	\begin{align}
+		\tau &= \int{} \sigma ( \nu ) n_{HI}(z) \d{l} \\
+	        &= \int{} \sigma ( \nu ) n_{HI}(z) \dx{l}{z}\d{z} \label{eq:tau}
+	\end{align}
+	The distance, $l$, used is the light travel time, the derivation of which is given in appendix~\ref{app:derivation_of_light_travel_distance}.
+	\begin{align}
+		\frac{dl}{dz} = \frac{c}{(1+z) H(z)} , \label{eq:dldz}
+	\end{align}
+	and the scattering cross-section of hydrogen is
+	\begin{align}
+		\sigma (\nu) = \frac{\mu_0 e^2 c}{4 m_e} f \phi(\nu) \label{eq:crosssection}
+	\end{align}
+	where f is the upward oscillator strength of the transition, with a value of 0.4162 for the Lyman-$\alpha$ transition\cite{MadauIGM} and $\phi(\nu)$ is the normalised line profile. Since the scattering cross section is highly resonant at the Lyman-$\alpha$ frequency and negligible elsewhere, $\phi$ can be approximated by the form of a delta function $\phi(\nu) = \delta (\nu - \nu_\alpha)$.
+
+	The mean density of neutral hydrogen can be calculated from the baryon density, $\Omega_b$. Starting with the definition of $\Omega_b$
+	\begin{align}
+		\rho_b &= \rho_\text{crit} \Omega_b =  \frac{3H_0^2}{ 8 \pi G} \Omega_b \\
+			&= \frac{3H_0^2}{ 8 \pi G} \Omega_{b0}(1+z)^3,
+		\intertext{we then note that the total baryonic density is also equal to the sum of the separate densities of light elements, which is dominated by hydrogen and Helium}
+		\rho_b &= \sum_\text{elements} \rho_i \\
+		&\approx \rho_H + \rho_{He} = \rho_H + Y\rho_b,
+	\end{align}
+	where $Y$ is the primordial abundance, by mass, of He with a value $Y = 0.246 \pm 0.0014$\cite{BBNabundance}. Equating the two resulting expressions for $\rho_b$ gives
+	\begin{align}
+		\frac{3H_0^2}{ 8 \pi G} \Omega_{b0}(1+z)^3 &= \frac{\rho_H}{1-Y} = \frac{n_H m_H}{1-Y}
+	\end{align}
+	\begin{align}
+		\Rightarrow \overline{n}_H &= \frac{3  H_0^2 (1-Y)}{ 8 \pi G m_H} \Omega_{b0} (1+z)^3 \\
+		\Rightarrow \overline{n}_H &= \overline{n}_{H0} (1+z)^3 .
+	\end{align}
+	The average number density of neutral hydrogen is this quantity scaled by the neutral fraction, $x_{HI}$
+	\begin{align}
+		 \overline{n}_{HI} = \overline{n}_H x_{HI} \\
+		 	&= \overline{n}_{H0} (1+z)^3 x_{HI} . \label{eq:nH}
+	\end{align}
+	Combining equations~\ref{eq:tau},~\ref{eq:dldz},~\ref{eq:crosssection} and~\ref{eq:nH} gives
+	\begin{align}
+		\tau_{GP} &= \int_0^{z_e} \frac{\mu_0 e^2 c f}{4 m_e}  \delta(\nu - \nu_\alpha) \overline{n}_{H0} \frac{ (1+z)^3 c}{(1+z) H(z)} x_{HI} dz \\[1em]
+		&= \frac{ \overline{n}_{H0} \mu_0 e^2 c^2 f}{4 m_e H_0} \int_0^{z_e} \delta(\nu - \nu_\alpha) \frac{(1+z)^2}{ E(z)} x_{HI} dz
+	\end{align}
+	For high redshift galaxies, we can use the Einstein-de Sitter approximation for the Hubble parameter evolution
+	\begin{align}
+		E(z) &= \sqrt{ \Omega_\Lambda + \Omega_{M0} (1+z)^3 + \Omega_{R0} (1+z)^4} \\
+			&\approx \sqrt{\Omega_{M0}}(1+z)^{3/2}.
+	\end{align}
+	We can also calculate the constant prefactor to have a value
+	\begin{align}
+		\frac{ \overline{n}_{H0} \mu_0 e^2 c^2 f}{4 m_e H_0} = (8.621\times 10^{20} ) \; h \; \Omega_{b0}
+	\end{align}
+	Therefore
+	\begin{align} \label{eq:tgp1}
+		\tau_{GP} = (8.621\times 10^{20} ) \frac{h \Omega_{b0}}{\sqrt{\Omega_{M0}}} \int_0^{z_e} \delta(\nu - \nu_\alpha) (1+z)^{1/2} x_{HI} \d{z}
+	\end{align}
+	The frequency of observed radiation, $\nu_0$ can be related to the frequency of the same radiation at some redshift, $z$, by:
+	\begin{align}
+				\nu(z) &= \nu_0(1+z)  \\
+		\Rightarrow \frac{d\nu}{dz} &= \nu_0.
+	\end{align}
+	This allows the integral to be writen purely in terms of $\nu$ and the action of the delta function is then to simply pick out the value of the integrand at the point $\nu = \nu_\alpha$. For convenience, we name the integral part of Equation~\ref{eq:tgp1} $I$
+	\begin{align}
+		I &=  \int_0^{z_e} \delta(\nu - \nu_\alpha)(1+z)^{1/2} x_{HI} \d{z} \\
+		  &=  \int_{\nu_0}^{\nu_e} \delta(\nu - \nu_\alpha) \sqrt{\frac{\nu}{\nu_0}} \; \frac{dz}{d\nu} \; x_{HI} \d{\nu} \\
+		  &=  \int_{\nu_0}^{\nu_e} \delta(\nu - \nu_\alpha) \sqrt{\frac{\nu}{\nu_0^3}} \; x_{HI} \d{\nu}\\
+		  &=  \sqrt{\frac{\nu_\alpha}{\nu_0^3}} \; x_{HI} \\
+		  &=  \sqrt{ \frac{(1+z)^3}{\nu_\alpha^2}}\; x_{HI} \\
+		\Rightarrow	I &=  \frac{(1+z)^{3/2}}{\nu_\alpha}\; x_{HI}
+	\end{align}
+	Note that if $\nu_\alpha$ does not fall within the limits of integration then both the integral and the resulting optical depth is zero. This is the case for the flux which falls on the redward side of the Lyman break.
+
+	Substituting the new value for the integral back into the optical depth equations gives
+	\begin{align}
+		\tau_{GP} &=  \frac{(8.621\times 10^{20} )}{\nu_\alpha} \frac{h \Omega_{b0}}{\sqrt{\Omega_{M0}}} \; (1+z)^{3/2} \; x_{HI} \\
+	       &=  (3.6 \times 10^{5}) \frac{h \Omega_{b0}}{\sqrt{\Omega_{M0}}} \; (1+z)^{3/2} \; x_{HI}.
+	\end{align}
+	This is conventionally writen in the form
+	\begin{align}
+		\tau_{GP} = 3.6 \times 10^5 \left ( \frac{\Omega_m h^2}{0.13}\right )^{-1/2}
+				\left ( \frac{\Omega_b h^2}{0.02}	\right )
+				\left ( \frac{1+z}{7}	\right )^{3/2}
+				\left ( \frac{n_{HI}}{n_H}	\right ) .
+	\end{align}
+% section derivation_of_the_gunn_peterson_optical_depth (end)

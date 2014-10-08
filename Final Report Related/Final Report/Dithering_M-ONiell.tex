@@ -1,0 +1,6 @@
+%!TEX root = mainfile.tex
+
+\subsection{Dithering} % (fold)
+\label{sub:dithering}
+	Dithering is a technique used in photometry whereby the pointing is adjusted a small amount between exposures. This technique's primary use it to account for dead pixels in the CCD; with adjustments of a few pixels the median stacking of the images means that any such defects will disappear. The technique also compensates for the presence of cosmic rays as well as undersampled images; where the sampling frequency is less than twice the highest frequency in the signal (Nyquist Theorem). Dithering also has the benefit of randomising the quantization error that occurs during the analogue-digital conversion of the signal [ADC_Kamensky]. Using a digital image processing method called ‘DRIZZLE', originally developed for use in the Hubble Deep Field, the dithered images can be combined to produce more accurate observations for a given S/N [DRIZZLE].
+% subsection dithering (end)

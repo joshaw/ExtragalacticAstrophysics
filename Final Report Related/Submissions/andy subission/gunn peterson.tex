@@ -1,0 +1,242 @@
+\documentclass[pdf,color]{UoBnote}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\author{Andy King}
+
+\shorttitle{cosmic}
+\title{Cosmic Reionization Report}
+\date{\today}
+\issue{1}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\vspace{1cm}\hrule \vspace{1cm}
+%\newpage
+
+\documentclass[pdf,color]{UoBnote}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\author{Andy King}
+
+\shorttitle{cosmic}
+\title{Cosmic Reionization Report}
+\date{\today}
+\issue{1}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\vspace{1cm}\hrule \vspace{1cm}
+%\newpage
+
+\section{The Gunn-Peterson Effect}	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The current theoretical description of cosmic evolution at the end of the dark ages of the universe has gained widespread acceptance; as have the qualitative stages and processes of the epoch of reionisation. However, real empirical evidence from these eras remains sparse and clouded by large uncertainties. To accept the popular descriptions as fact without recourse to solid and quantitative evidence would be premature and in order to effectively investigate these high-redshifts, it is necessary to understand the spectral features of the objects we see in them. \\
+
+Along with measurements of the Hydrogen 21cm line, the Gunn-Peteson effect and its impact on the spectra of distant galaxies are the two primary methods of observation currently being used to throw light on the epoch of reionisation and the early universe as a whole.
+
+\subsection{The Lyman Break}	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The Lyman-$\alpha$ line is the spectral line corresponding to the n=1 to n=2 electron level transition in neutral Hydrogen; it is the first transition in the Lyman series and the lowest energy level transition a Hydrogen atom is capable of undergoing from its ground state. This transition is of particular relevance to cosmology and cosmic reionization, firstly, because during primordial nucleosynthesis, Hydrogen atoms were created in the greatest abunance, with over 90\% of the produced atoms being Hydrogen, approximately 8\% being Helium with smaller abundancies of other light elements. Furthermore, during the epoch of reionization the average time between atomic excitations was large compared to the decay times of the excited states, meaning that the vast majority of HI atoms were in the ground state. This meant that the neutral IGM was highly resonant with photons of Lyman-$\alpha$ frequency, and was largely incapable of absorbtion of lower freqencies (ignoring the effects of fine and hyperfine line splitting)      \\
+
+The proportion of radiation of some frequency which penetrates a medium is characterised by the medium's optical depth, $\tau$, for that wavelength, such that:
+
+\begin{align}
+			I = I_0 \; e^{-\tau}.
+\end{align}
+
+The optical depth of neutral Hydrogen to Lyman-$\alpha$ photons can be approximated by:
+
+\begin{align}
+			\tau_{GP} = 4.9 \times 10^5 \; 	\left ( 	\frac{\Omega_m h^2}{0.13}	\right ) ^{-1/2}	
+								\left ( 	\frac{\Omega_b h^2}{0.02}	\right ) 	
+								\left ( 	\frac{1+z}{7}			\right )^{3/2} 	
+								\left ( 	\frac{n_{HI}}{n_H}			\right ) .
+\end{align}		% Bajtlik, S., Duncan, R.C., & Ostriker, J.P. 1988
+
+% radiatin is scattered not absorbed
+
+Using conventional values for $\Omega_b$ and $\Omega_m$ we can see that, for redshifts $>$6, the fraction of neutral Hydrogen required to reduce the transmitted intensity to less than 1\% of the incident value is of the order of $10^{-5}$. Therefore, only a small amount of neutral Hydrogen must occupy the intervening space between the distant galaxy and the observer to effectively eliminate the Lyman-$\alpha$ frequency from the object's spectrum. \\
+
+However, the frequency of radiation which is absorbed is not the Lyman-$\alpha$ line in the rest frame of the emitter, but in the rest frame of the absorber, such that as the light travels along its path to the observer successively shorter and shorter wavelengths are redshifted into resonance with the local neutral IGM and each wavelength is, in turn, scattered into extinction. This process continues untill the radiation reaches a region of spacetime where the Hydrogen neutral fraction is significantly below the previously calculated value of $10^{-5}$. \\
+
+This effect, discovered by Gunn and Peterson in 1965, results in the extinction of a large portion of the flux from distant galaxies in the region blueward of the object's rest frame  Lyman-$\alpha$ line, known as the Lyman-$\alpha$ break, or the Gunn-Peterson trough. \\
+
+\begin{figure}[h]	\begin{center}
+\includegraphics[scale=0.3]{images/dropout.jpg}
+\caption{Gunn-Peterson dropout in the spectrum of a galaxy at z=6.4.}\label{fig:dropout}
+\end{center}		\end{figure}
+
+% talk about resulting lyman alpha forest, especially at low redshifts
+
+The spectral flux from distant galaxies redward of the Lyman break is unaffected by Gunn Peterson scattering and remains representative of the true brightness of the luminous object, while the region of the spectrum blueward of the break is highly obscured bycontains the infomation regarding the optical depth of the intervening space and, thereby, the density of neutral hydrogen at the redshift at which the lyman break falls on that wavelength. Moreover, because the Lyman alpha line invariably falls at a specific point in the emitted spectrum, the redshift of any observed spectrum with an identifiable Lyman break can be measured easily. The break is such a strong spectral feature that it can be located even using broad band photometry, which is a significant advantage for objects at such distances that very little of their emitted light reaches us.\\
+
+\subsection{The Lyman-$\alpha$ Forest}
+
+The neutral Hydrogen distribution during cosmic reionization was not homogenous, with expanding bubbles of ionised IGM during the start of ionization and diminishing areas of neutral hydrogen after the central phase of rapid ionization. Regions of the IGM which are relatively underdense in neutral Hydrogen have a correspondingly smaller optical depth to Lyman-$\alpha$ photons passing through them, resulting in sets of peaks on the blueward side of the Lyman break known as the Lyman-$\alpha$ forest.     
+
+The Lyman forest peaks in figure~\ref{fig:dropout} are typical of galaxies at $z>5$ but the intesity fluctuations in the Lyman forest are largest in regions where the neutral Hydrogen fraction is close to the critical value of $~10^{-5}$, such that even small fluctionations in ionised fraction lead to a large variation in transmitted intensity. An example of this is shown in figure~\ref{fig:forest}.\\
+
+\begin{figure}[h]	\begin{center}
+\includegraphics[scale=0.35]{images/forest.png}
+\caption{The spectra of two similar galaxies. Above: the spectrum of a galaxy at z=0.158 showing no significant extinction from Gunn Peterson scattering. Below: the spectrum of a galaxy at z=3.62 showing a Lyman forest caused by fluctuations in Hydrogen netrual fraction.}
+\label{fig:forest}
+\end{center}		\end{figure}
+
+It paradoxically seems, therefore, that the loss of flux caused by the Gunn-Peterson effect is extremely fortuitous to the observational cosmologist. Since the true emitted spectra of Lyman break galaxies are similar in nature to the spectra of closer galaxies with negligible Gunn Peterson absorption, it is possible, in theory, to probe the density of neutral Hydrogen at every point between the observed galaxy and the end of reionization.\\
+
+\subsection{Properties of the Lyman-$\alpha$ line}
+
+
+The full relativistic equation for the energy levels of neutral Hydrogen was calculated by Dirac to be:
+\begin{align}
+			E_{n,j} = - \frac{e^4}{ (4 \pi \epsilon_0)^2 2 \hbar^2 n^2} \left( \frac{m_p m_e}{m_p + m_e} \right) % E + R, p286
+					\left [ 1 + \frac{\alpha^2}{n} \left( \frac{1}{j+1/2} - \frac{3}{4n} \right) \right]
+\end{align}
+
+Where $\alpha$ is the fine structure constant:
+\begin{align}		
+			\alpha = \frac{e^2}{4 \pi \epsilon_0 \hbar c}  \approx \frac{1}{137}.
+\end{align}
+
+However, the final factor in square brackets is a small fractional correction of the order $10^{-5}$ or below and replacing the electron-proton reduced mass simply with the electron mass makes a fractional difference of the order of only $10^{-4}$. If we apply both these approximations the equation reduces to the more familiar relation for Hydrogen energy levels which can be derived from the Bohr model of quantum mechanics:
+
+\begin{align}
+			E_n = - \frac{m_e e^4}{8 \epsilon_0^2 h^2 n^2}.
+\end{align}
+
+Using this result, we can calculate the energy transfer of the n=2 to n=1 transition:
+
+\begin{align}
+			\Delta E_{2,1} = E_2 - E_1 = 10.199\; \textup{eV} ,
+\end{align}
+corresponding to a wavelength of:
+\begin{align}
+			\lambda_{Ly\alpha} = \frac{hc}{\Delta E_{2,1}} = 1215.7 \; \textup{\AA}.
+\end{align}
+
+This means the absorbed photons will invariably be ultraviolet in the absorber rest frame, but for objects observed during the epoch of reionization, cosmological redshift will push the observed Lyman break into the near infrared in the observer frame. The challenges of observing these wavelengths from such large distances and potential methods of overcoming them comprise a large portion of this report. 
+
+%% mostly from 'The Intergalactic Medium' by Piero Madau
+
+
+\subsection{Derivation of the Gunn-Peterson Optical Depth}
+
+The optical depth, $\tau$, of a medium to light of some frequency, $\nu$, can be calculated using:
+\begin{align}
+			\tau = \sigma(\nu) N ,
+\end{align}
+where N is the column density, calculated using:
+\begin{align}
+			N = \int n dl .
+\end{align}
+Therefore, for the optical depth of neutral Hydrogen in the early universe, we have:
+\begin{align}
+			\tau = \int{} \sigma ( \nu ) n_{HI}(z) dl    
+			        = \int{} \sigma ( \nu ) n_{HI}(z) \frac{dl}{dz} dz
+\end{align}
+From the proper line element of the Friedman-Robertson-Walker metric the derivative of the proper distance, $l$, can be decuced to be:
+\begin{align}
+			\frac{dl}{dz} = \frac{c}{(1+z) H(z)} ,
+\end{align}
+and the scattering cross-section of Hydrogen is:
+\begin{align}
+			\sigma (\nu) = \frac{\mu_0 e^2 c}{4 m_e} f \phi(\nu)
+\end{align}
+where f is the upward oscillator strength of the transition, with a value of 0.4162 for the Lyman$\alpha$ transition and $\phi(\nu)$ is the normalised line profile. Since the scattering cross section is highly resonant at the Lyman-$\alpha$ frequency and negligible elsewhere, $\phi$ can be approximated by the form of a delta function $\phi(\nu) = \delta (\nu - \nu_\alpha)$ . \\
+
+The mean density of neutral Hydrogen can be calculated from the baryon density, $\Omega_b$. We start with the definition of $\Omega_b$:
+\begin{align}
+			\rho_b = \rho_{crit} \; \Omega_b =  \frac{3H_0^2}{ 8 \pi G} \; \Omega_b = \frac{3H_0^2}{ 8 \pi G} \; \Omega_{b0}(1+z)^3,
+\end{align}
+we then note that the total baryonic density is also equal to the sum of the separate densities of light elements, which is dominated by Hydrogen and Helium:
+\begin{align}
+			\rho_b = \sum_{elements} \rho_i \; \approx \; \rho_H + \rho_{He} = \rho_H + Y\rho_b,
+\end{align}
+where Y is the primordial abundance, by mass, of He with a value Y = $0.247 \pm 0.02$. Equating the two resulting expressions for $\rho_b$ gives:
+\begin{align}
+			 \frac{3H_0^2}{ 8 \pi G} \; \Omega_{b0}(1+z)^3 = \frac{\rho_H}{1-Y} = \frac{n_H m_H}{1-Y}
+\end{align}
+\begin{align}
+			 \Rightarrow \overline{n}_H &= \frac{3  H_0^2 (1-Y)}{ 8 \pi G m_H} \Omega_{b0} (1+z)^3 \\
+			 \Rightarrow \overline{n}_H &= \overline{n}_{H0} (1+z)^3 . 
+\end{align} 
+
+The average number density of neutral Hydrogen is this quantity scaled by the neutral fraction, $x_{HI}$:
+\begin{align}
+			 \overline{n}_{HI} = \overline{n}_H x_{HI} = \overline{n}_{H0} \; (1+z)^3 \; x_{HI} . 
+\end{align} 
+
+Combining equations tau, differential, sigma and nH gives:
+
+\begin{align}
+\tau_{GP} &= \int_0^{z_e} \frac{\mu_0 e^2 c f}{4 m_e} \; \delta(\nu - \nu_\alpha) \; \overline{n}_{H0} \; \frac{ (1+z)^3 c}{(1+z) H(z)} \; x_{HI} dz \\ \\
+&= \frac{ \overline{n}_{H0} \; \mu_0 e^2 c^2 f}{4 m_e H_0} \int_0^{z_e} \delta(\nu - \nu_\alpha) \;  \frac{(1+z)^2}{ E(z)} x_{HI} dz 
+\end{align}
+
+For high redshift galaxies, we can use the Einstein-de Sitter approximation for the Hubble parameter evolution:
+\begin{align}
+			E(z) = \sqrt{ \Omega_\Lambda + \Omega_{M0} (1+z)^3 + \Omega_{R0} (1+z)^4} \approx \sqrt{\Omega_{M0}}(1+z)^{3/2}.
+\end{align}
+We can also calculate the constant prefactor to have a value:
+\begin{align}
+		\frac{ \overline{n}_{H0} \; \mu_0 e^2 c^2 f}{4 m_e H_0} = (8.621\times 10^{20} ) \; h \; \Omega_{b0}
+\end{align}
+Therefore:
+\begin{align}
+\tau_{GP} =   (8.621\times 10^{20} ) \frac{h \Omega_{b0}}{\sqrt{\Omega_{M0}}}  \int_0^{z_e} \delta(\nu - \nu_\alpha) \;  (1+z)^{1/2} \; x_{HI} \; dz
+\end{align}
+
+The frequency of observed radiation, $\nu_0$ can be related to the frequency of the same radiation at some redshift, $z$, by:
+\begin{align}
+			\nu (z) = \nu_0(1+z)  &&
+	\Rightarrow 	\frac{d\nu}{dz} = \nu_0.
+\end{align}
+
+This allows us to write the integral purely in terms of $\nu$ and the action of the delta function is then to simply pick out the value of the integrand at the point $\nu = \nu_\alpha$. For convenience, we name the integral part $I$:
+
+\begin{align}
+			I &=  \int_0^{z_e} \delta(\nu - \nu_\alpha) \;  (1+z)^{1/2} x_{HI}\; dz \\ 
+			  &=  \int_{\nu_0}^{\nu_e} \delta(\nu - \nu_\alpha) \;  \sqrt{\frac{\nu}{\nu_0}} \; \frac{dz}{d\nu} \; x_{HI}\; d\nu \\
+			  &=  \int_{\nu_0}^{\nu_e} \delta(\nu - \nu_\alpha) \;  \sqrt{\frac{\nu}{\nu_0^3}} \; x_{HI}\; d\nu \\ 
+			  &=  \sqrt{\frac{\nu_\alpha}{\nu_0^3}} \; x_{HI} \\
+			  &=  \sqrt{ \frac{(1+z)^3}{\nu_\alpha^2}}\; x_{HI} \\
+	\Rightarrow	I &=  \frac{(1+z)^{3/2}}{\nu_\alpha}\; x_{HI}
+\end{align}
+Note that if $\nu_\alpha$ does not fall within the limits of integration then both the integral and the resulting optical depth is zero. This is the case for the flux which falls on the redward side of the Lyman break. \\
+
+Substituting the new value for the integral back into the optical depth equations gives:
+\begin{align}
+			\tau_{GP} &=  \frac{(8.621\times 10^{20} )}{\nu_\alpha} \frac{h \Omega_{b0}}{\sqrt{\Omega_{M0}}} \; (1+z)^{3/2} \; x_{HI} \\
+				       &=  (3.494 \times 10^{5}) \frac{h \Omega_{b0}}{\sqrt{\Omega_{M0}}} \; (1+z)^{3/2} \; x_{HI}.
+\end{align}
+
+This is conventionally writen in the form:
+\begin{align}
+			\tau_{GP} = 3.59 \times 10^5 \; 	\left ( 	\frac{\Omega_m h^2}{0.13}	\right ) ^{-1/2}	
+								\left ( 	\frac{\Omega_b h^2}{0.02}	\right ) 	
+								\left ( 	\frac{1+z}{7}			\right )^{3/2} 	
+								\left ( 	\frac{n_{HI}}{n_H}			\right ) .
+\end{align}
+
+%% derive line length metric thing
+
+% derive magnitude schechterfunction
+
+%% optical depth equation
+
+%%%% transition diagram
+
+%%%% resonance graph
+
+%%%% fan picture of the troughs
+
+
+\end{document}

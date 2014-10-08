@@ -1,0 +1,27 @@
+%!TEX root = mainfile.tex
+
+\section{Predictions Group} % (fold)
+\label{sec:predictions_group}
+(Beth)
+
+	In order for those attempting to observe high redshift galaxies to propose a detailed experimental plan, it is important to know how many galaxies one is expecting to observe within a certain volume of the sky. This is the fundamental purpose of the predictions sub-group; to be able to compute this quantity with the depth of the surveyed volume corresponding directly to redshift. In order to do this, a computer program is required to efficiently calculate this number as a function of redshift, field of view and apparent magnitude enabling those observing to make an informed prediction of the telescope one would need and the observing time required to make definitive observation of such elusive galaxies.
+
+	This section of the project was structured chronologically as follows:
+	\begin{itemize}
+		\item Research how early galaxies are professionally predicted.
+		\item Find a general Schechter function in terms of luminosity and/or magnitude.
+		\item Mathematically process this function to ensure it is consistent with the units used by those carrying out the observations.
+		\item Build a computer program to automate the process of calculating the number of galaxies from the Schechter function.
+		\item Find plausible starting parameters to use in primary program.
+		\item Collate parameter data from published papers.
+		\item Determine parameter evolution with time.
+		\item Plot these results to produce a visual description of how these parameters affect the outcome.
+		\item Give expected number of galaxies to the observers.
+		\item Refine technique with the inclusion of more advanced adaptations.
+	\end{itemize}
+
+	In addition to running a program to calculate the total number of galaxies, there is also a separate program to determine the redshifts at which reionization began and ended to be included when calculating the number of galaxies in the main code.
+
+	The beginning of reionization has been determined by equating the star formation rate density with the critical star formation rate density required for matter to collapse into galaxies. The end of reionization occurs when the photons produced in star formation have completely ionized the IGM and hence required direct application of star formation rate densities also. This will be covered in more detail in Section~\ref{sec:lower_redshift_limit_on_Re-ionization}.
+
+% section predictions_group (end)

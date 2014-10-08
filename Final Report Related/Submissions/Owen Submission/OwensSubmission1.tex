@@ -1,0 +1,159 @@
+\documentclass[pdf,color]{UoBnote}
+
+\author{Owen McConnell}
+
+\shorttitle{Finding Redshift Limits}
+\title{Cosmic Reionization}
+\date{\today}
+\issue{1}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\vspace{1cm}\hrule \vspace{1cm}
+\newpage
+
+
+
+
+
+
+
+\section{Calculating the timescale of Reionization}
+At the beginning of reionization, stars needed to form in order to ionize the neutral hydrogen in the universe. These stars were formed when the perturbations in matter amplified by gravitational attraction, resulted in matter cooling and condensing into molecular clouds. Initially hydrogen and helium were in the ground state DUE TO..., and consequently could not cool effectively via atomic line emission. At a certain redshift, the temperature was low enough for atomic line emission to occur, and for the gas to collapse to form a star, while losing energy in the form of ionizing photons. At this redshift the critical star formation rate density of the universe, necessary to overcome recombination was equal to the actual star formation rate density, and consequently, reionization began. DEFINITELY SHOULD EXPLAIN MORE
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Critical SFRD}
+The critical star formation rate density is found by an analytical model constructed by (SOMEONE ET AL)
+
+\begin{equation}
+\rho^*_{SFR} = 0.027 \times f^{-1}_{esc} \left (\frac{C}{30} \right ) \left (\frac{1+z}{7} \right )^3 \left (\frac{\Omega_b h^2}{0.0465} \right )^2
+\end{equation}
+Where $f_{esc}$ is the fractional escape of photons, z is the redshift, $\Omega_b$ is the baryonic desity XXX and C is the clumping factor. The clumping factor is heavily related to the rate of recombinations, and is described by the following equation;
+\begin{equation}
+C=\frac{<n^2_H>}{<n_H>^2}
+\end{equation}
+REFERENCE
+where $n_H$ is the number density of hydrogen in the universe. Equation (X) shwos the theoretical value of the clumping factor at a particular redshift, a model developed by (SOMEONE ET AL)
+\begin{equation}
+C=\left (26.2917 e^{-0.1822z+0.003505z^2} \right )^{1/2}
+\end{equation}
+This was plotted in Figure (X)\\
+\newline
+PICTURE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%  -----------------------------  %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%  INSERT PICTURE OF P_CRIT HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%  -----------------------------  %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Star Formation Rate Density}
+The star formation rate density can be approximated from the luminosity density, as demonstrated in figure (X) (SOMEONE ET AL):
+\begin{equation}
+\rho_{SFR}=1e^{-28} \rho_L
+\end{equation}
+where $\rho_L$ is spectral luminosity density in the region of $2150\pm 650 \AA$ in units of $(ergs \ s^{-1} Hz^{-1} Mpc^{-3})$. It is calculated from the integral of the Schechter function, multiplied by the luminosity (See Figure X.X), when spectral luminosities are inputted.\\ 
+\newline 
+The characteristic magnitude, when converted to a luminosity, is a spectral luminosity NEED TO INCLUDE DESCRIPTION \\
+\newline
+The lower luminosity limit on the schechter function in figure (X.X) corresponds to the spectral luminosity of galaxies with the smallest mass possible, discussed in NEXT SECTION
+\subsubsection{Minimum Galaxy Mass}
+In order to find the minimum mass that corresponds to the lower limit of luminosity, the jeans mass at the redshift at which the characteristic mass of a dark matter halo, given by equation(X),
+
+\begin{equation}
+M^*=10^{13}h^{-1}(1+z)^{-4} M_\odot
+\end{equation}
+REFERENCE AND SAY UNITS ETC
+is equal to the Jean's Mass, as shown in equation(X). The Jean's Mass defines the critical mass of a cloud before it can collapse to form a galaxy, thereby limiting the minimum mass of a star forming galaxy.
+\begin{equation}
+M_J\approx 5.73\times10^3 \left (\frac{1+z}{10} \right )^{3/2} M_{\odot}
+\end{equation}
+REFERENCE AND UNITS ETC
+At the redshift at which these equations are equal, the mass of the galaxy was assumed to break away from the rest of the matter of the universe, and was considered separate and distinct from it, for all calculations. This assumption ensured that this was a minimum mass of a galaxy, as no more external matter could add to the mass of the gas after this. The redshift at which this occurs was z=106. This corresponds to a minimum mass of a galaxy as $M=1.1\times10^5M_\odot$.\\
+\newline
+Assuming a Mass-Luminosity ratio of 1, this corresponds to an upper limit on the Luminosity of $1.1\times 10^5 L_\odot$. However this is a bolometric luminosity and not a spectral luminosity. In order to convert this, it is necessary to approximate the shape of the spectrum of the galaxy. The galaxy was modelled as a blackbody of temperature $1\times 10^5$K. FROM WHERE \\
+\newline
+The Intensity of a blackbody is proportional to the spectral luminosity. As the area under the graph of Spectral Luminoisty against frequency is equal to the bolometric Luminosity, it is possible to write TALK ABOUT UV AND GRAPH SCALING
+\begin{eqnarray}
+L_v= kI(v,T) \\
+\int^{\infty}_{0}L_v dv=L_{bol} \\
+k\int^{\infty}_{0}I dv=L_{bol} \\
+L_v = \frac{I(v,T)}{\int^{\infty}_{0}I dv} \times L_{bol}
+\end{eqnarray}
+The area under the blackbody Intensity graph (See Figure X.X) was computed to be 75224.6 (UNITS) Knowing that the Intensity of a blackbody against frequency,
+\begin{equation}
+I(v,T)=\frac{8\pi v^2}{c^3}\frac{hv}{e^\frac{hv}{kT}-1}
+\end{equation}
+where, within $I(v,T)$, v is the frequency corresponding to $2150\pm 650 \AA$, and T=$1.1\times 10^5K$. The lower limit of spectral luminosity in the UV range, therefore, was calculated to be $9.755\times 10^{21}$, for a frequency corresponding to 2150$\AA$.
+\subsection{Higher Redshift Limit}
+In order to compute the Luminosity density - it was necessary to convert the Schechter Function Integral into a Gamma function. 
+\begin{eqnarray}
+\rho_L = \int^{\infty}_{L'=L} \phi(L')L'dL'=\ \ \ \ \ \ \ \frac{\phi^*}{L^*}\int^{\infty}_{L'=L}\left (\frac{L'}{L^*} \right )^{\alpha}e^\frac{-L'}{L^*}L'dL'\\
+= \ \ \ \frac{\phi^*}{L^*}\int^{\infty}_{L'=L}\left (\frac{L'}{L^*}\right )^{\alpha}e^\frac{-L'}{L^*}\frac{L'L^*}{L^*}dL'\\
+= \ \frac {\phi^*}{L^*}\int^{\infty}_{L'=L}\left ( \frac{L'}{L^*} \right )^{\alpha+1}e^\frac{-L'}{L^*}L^{*2}d\frac{L'}{L^*} \\
+= \ \ \ \phi^*L^*\int^{\infty}_{L'=L}\left ( \frac{L'}{L^*} \right )^{\alpha+1}e^\frac{-L'}{L^*}d\frac{L'}{L^*} \\
+= \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \phi^*L^*\Gamma(\alpha+2, L/L^*)
+\end{eqnarray}
+This permitted the actual star formation rate density to be computed, and the graph of star formation rate density against critical star formation rate density was plotted See Figure (X.X)
+
+PICTURE
+
+\subsection{Lower Limit of Redshift}
+Using estimates of the fractional escape and zeta, we can use the formula (X.X) combined with formula (X.X) to calculate the rate of reionization. From this, and the number of neutral hydrogen particles in the universe, it is possible to calculate the timescale of reionization. 
+
+\begin{equation}
+t =\frac{dnion}{dt}\times \frac{1}{n_H}
+\end{equation}
+Where t is the time between the start of reionization and the end, in seconds, nion is the number of ionizing photons produced and $n_H$ is the number of Hydrogen atoms in the universe. \\
+\newline
+As the number of photons produced roughly equals the number of neutral hydrogen in the universe, it is possible to calculate a limit on the redshift associated with the end of reionization, given the corresponding opposite limit. \\
+\newline
+A simulation of this was undergone using the equation above, and the resultant timescale was found to be NEED TO GIVE FINAL RESULT
+
+
+
+
+
+\end{document}
+
+
+%and the Absolute Magnitude (i.e. the dimmest ionizing galaxy.) DOES MINIMUM MASS GIVE THIS?
+
+%\subsection{Press Schechter Formalism}
+
+%PSF is a method of obtaining the number of objects with a specific mass within a certain volume. It assumes that the universe linearly “clumped” at the beginning of the universe, until a point where the density of the clumps break away from the rest of the universal expansion, and is treated as a massive body which collapses rapidly. (this occurs at around $\delta_c$\~1.68 – Gunn and Gott). Press and Schechter suggest a probability distribution function of =:
+
+%\begin{equation}
+%p(M,z)=-2p_0 \frac{\Delta P [\delta_v>\delta_c(z)]} {\Delta M} dM
+%\end{equation}
+%Where $p_0$ is the mean density of the universe, and $\delta_c(z)$ is the overdensity threshold per redshift. P is the cumulative probability distribution of $\delta_v$ (volume)\\
+%\newline
+ %It is from this that Schechter functions of luminosity and magnitude could arise....
+
+%WRITE ABOUT THE PROGRAM
+
+
+
+
+%\begin{equation}
+%M_J=\left ( \frac{5kT}{Gm}\right ) ^{3/2} \left ( \frac{3}{4\pi\rho} \right ) ^{1/2}
+%\end{equation}
+%\begin{equation}
+%M_J = 5.73\times 10^3\left (\frac{\Omega_mh}{0.15} \right )^{-1/2} \left (\frac{\Omega_b h^2}{0.022}\right )^{-3/5}  \left ( \frac {1+z}{10} \right ) ^{3/2} M_\odot
+%\end{equation}
+
+
+%IS BOLOMETRIC -> ABSOLUTE? NO ABSOLUDE IS IN A PARTICULAR BAND
